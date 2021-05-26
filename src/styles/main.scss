@@ -4,11 +4,77 @@ $font-color: lch(53 105 40);
 html {
   font-size: $font-size;
   color: $font-color;
+  background-color: grey;
 }
-.triangle1 {
+/* .triangle1 {
   display: inline-block;
   height: 0;
   width: 0;
   border-bottom: 150px solid green;
   border-left: 67px solid transparent;
+} */
+.menu {
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  animation: 4s ease-in-out 0s infinite rotationLogo ;
+/*   transform: rotate3d(0,1,1,
+360deg
+ */
+
+}
+.div1 {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 150px solid green;
+  border-left: 67px solid transparent;
+  position: absolute;
+  top: 0;
+}
+
+.div2 {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 129px solid white;
+  border-left: 58px solid transparent;
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+
+.div3 {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 150px solid white;
+  border-left: 67px solid transparent;
+  transform: rotate3d(0, 0, 15, 180deg);
+  position: absolute;
+  top: 150px;
+  left: 68px;
+}
+
+.div4 {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 129px solid green;
+  border-left: 58px solid transparent;
+  transform: rotate3d(0, 0, 15, 180deg);
+  position: absolute;
+  top: 153px;
+  left: 72px;
+}
+
+@keyframes rotationLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate3d(0,1,1,360deg) scale(1.5);
+  }
 }
