@@ -100,9 +100,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   text-shadow: 0 0 5px #000;
-  background-color: #000;
+  //background-color: #000;
 }
 .disparition {
   position: relative;
@@ -111,7 +111,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   text-shadow: 0 0 5px #000;
   z-index: 11;
   background-color: white;
@@ -132,18 +132,25 @@ main {
   background: red;
 }
 
-.bg1 {
+/* .bg1::after {
   background-image: url('https://drawingdatabase.com/wp-content/uploads/2016/02/fiat-124-spider.gif');
-  z-index: 6;
-  //background-size: cover;
+  /* z-index: 6; */
+  /* background-size: cover; */
   /* background-color: black; */
+/* }
+
+.bg2::after {
+  background-image: url('https://drawingdatabase.com/wp-content/uploads/2016/02/fiat-124-spider.gif');
+  /* z-index: 6; */
+  /* background-size: cover; */
+  //background: rgb(135, 173, 135);
+/* }  */
+.bg1::after {
+  background-image: url('https://placekitten.com/g/900/700');
 }
 
-.bg2 {
-  background-image: url('https://drawingdatabase.com/wp-content/uploads/2016/02/fiat-124-spider.gif');
-  z-index: 6;
-  //background-size: cover;
-  //background: rgb(135, 173, 135);
+.bg2::after {
+  background-image: url('https://placekitten.com/g/800/600');
 }
 /* .bg2 {
   background-color: rgb(135, 173, 135);
