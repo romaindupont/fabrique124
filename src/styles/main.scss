@@ -6,6 +6,10 @@ html {
   color: $font-color;
   background-color: grey;
 }
+
+body {
+  margin: 0;
+}
 /* .triangle1 {
   display: inline-block;
   height: 0;
@@ -20,7 +24,7 @@ html {
   top: 25%;
   left: 50%;
   animation: 4s ease-in-out 0s infinite rotationLogo ;
-  z-index: 3;
+  z-index: 12;
 /*   transform: rotate3d(0,1,1,
 360deg
  */
@@ -79,7 +83,9 @@ html {
     transform: rotate3d(0,1,1,360deg) scale(1.5);
   }
 }
-
+main {
+  width: 100vw;
+}
 .wrapper {
   height: 100vh;
   overflow-x: hidden;
@@ -96,8 +102,20 @@ html {
   justify-content: center;
   color: white;
   text-shadow: 0 0 5px #000;
+  background-color: #000;
 }
-
+.disparition {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  z-index: 11;
+  background-color: white;
+}
 .parallax::after {
   content: " ";
   position: absolute;
@@ -114,12 +132,87 @@ html {
   background: red;
 }
 
-.bg1::after {
-  //background-image: url('https://placekitten.com/g/900/700');
-  background-color: black;
+.bg1 {
+  background-image: url('https://drawingdatabase.com/wp-content/uploads/2016/02/fiat-124-spider.gif');
+  z-index: 6;
+  //background-size: cover;
+  /* background-color: black; */
 }
 
-.bg2::after {
-  //background-image: url('https://placekitten.com/g/800/600');
-  background-color: black;
+.bg2 {
+  background-image: url('https://drawingdatabase.com/wp-content/uploads/2016/02/fiat-124-spider.gif');
+  z-index: 6;
+  //background-size: cover;
+  //background: rgb(135, 173, 135);
+}
+/* .bg2 {
+  background-color: rgb(135, 173, 135);
+  display: flex;
+  position: relative;
+/*   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  border: 1px solid black; */
+/* } */
+
+/* .bg2 > div {
+  width: 25%;
+  height: 100vh;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+ .bg2 > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}  */
+
+/* span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+span:nth-child(2) {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100vw;
+  height: 10%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+span:nth-child(3) {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100vw;
+  height: 10%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+span:nth-child(4) {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100vw;
+  height: 10%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+span:nth-child(5) {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100vw;
+  height: 10%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}  */
+.bg1 > h1 {
+  display: none;
+}
+
+h1 {
+  z-index: 10;
 }
