@@ -1,3 +1,4 @@
+import { forEach } from 'lodash';
 import './styles/main.scss';
 //import { menu, menu1, triangle } from './js/menu.js';
 
@@ -13,11 +14,19 @@ const disparition = () => {
   const fenetreDisparition = document.querySelector('.disparition');
   //fenetreDisparition.style.transform = "translate(0%, -100%)";
   fenetreDisparition.style.display = 'none';
-  const titreApparition = document.querySelector('.Titre');
-  titreApparition.style.display = "block";
+  const titreApparition = document.querySelectorAll('.Titre');
+  titreApparition.forEach(element => element.style.display = "block");
 }
 
-const time = setTimeout(disparition,10000);
+const AddLogo = () => {
+  const premPage = document.querySelector('.disparition');
+  const image = document.createElement('IMG')
+  image.setAttribute('src', '../src/assets/Logos/La_fabrique_simple.png');
+  image.className = "lafabrique-logo";
+  premPage.append(image);
+}
+const time2 = setTimeout(AddLogo,3000)
+const time = setTimeout(disparition,8000);
 
 const OpenCloseMenu = () => {
   const menuClick = document.querySelector('.menuB');
@@ -29,4 +38,4 @@ const OpenCloseMenu = () => {
   })
 }
 
-app.append(time, OpenCloseMenu())
+app.append(time, time2, OpenCloseMenu())

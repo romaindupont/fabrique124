@@ -19,18 +19,28 @@ body {
   position: absolute;
   top: 25%;
   left: 50%;
-  animation: 4s ease-in-out 0s infinite rotationLogo ;
+  
   z-index: 12;
 /*   transform: rotate3d(0,1,1,
 360deg
  */
-
+ &-imageVolant {
+   width: 60%;
+   animation: 4s ease-in-out 0s infinite rotationLogo ;
+ }
+}
+.lafabrique-logo {
+/*   position: absolute;
+  top: -80px;
+  right: 0;
+  width: 500px; */
+  animation: 5s ArriveeFabriqueLogo;
 }
 .div1 {
   display: inline-block;
   height: 0;
   width: 0;
-  border-bottom: 150px solid green;
+  border-bottom: 150px solid #368a30;
   border-left: 67px solid transparent;
   position: absolute;
   top: 0;
@@ -63,7 +73,7 @@ body {
   display: inline-block;
   height: 0;
   width: 0;
-  border-bottom: 129px solid green;
+  border-bottom: 129px solid #368a30;
   border-left: 58px solid transparent;
   transform: rotate3d(0, 0, 15, 180deg);
   position: absolute;
@@ -76,7 +86,18 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate3d(0,1,1,360deg) scale(1.5);
+    transform: rotate3d(0,8,1,360deg) scale(1.5);
+  }
+}
+
+@keyframes ArriveeFabriqueLogo {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 main {
@@ -124,7 +145,7 @@ main {
 }
 
 .static {
-  background: red;
+  background: #99cc99;
 }
 
  .bg1::after {
@@ -132,11 +153,15 @@ main {
  }
 
 .bg2::after {
-  background-image: url('https://drawingdatabase.com/wp-content/uploads/2016/02/fiat-124-spider.gif');
+  background-image: url('../assets/Illustrations/vectoriel_sitew_blueprintgreen.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200%;
  }
 
 .Titre {
   display: none;
+  width: 50%;
 }
 
 .app-menu {
@@ -149,7 +174,7 @@ main {
   display: inline-block;
   height: 0;
   width: 0;
-  border-top: 200px solid green;
+  border-top: 200px solid #368a30;
   border-right: 100px solid transparent;
   top: 0;
   left: 0;
@@ -204,7 +229,7 @@ main {
   height : 0;
   width : 0;
   border-top : 210px solid white;
-  border-right : 125px solid transparent;
+  border-right : 105px solid transparent;
   @media only screen and (max-width: 690px) {
     border-top : 255px solid white;
   }
