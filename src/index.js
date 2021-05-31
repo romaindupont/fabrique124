@@ -37,7 +37,20 @@ const OpenCloseMenu = () => {
     modal.classList.toggle('menu-modal--open');
     const nav = document.querySelector('.menu-nav');
     nav.classList.toggle('menu-nav--open');
+    const link = document.querySelector('.menu-nav--link'); 
+    link.addEventListener('mouseover', () => {
+      const modalOpen = document.querySelector('.menu-modal--open');
+      const img = document.createElement('IMG')
+      img.setAttribute('src', '../src/assets/Illustrations/image.png');
+      modalOpen.append(img)
+    })
+    link.addEventListener('mouseout', () => {
+      const modalOpenImg = document.querySelector('.menu-modal--open > img');
+      modalOpenImg.style.display ='none'
+    })
   })
 }
+
+
 
 app.append(time, time2, OpenCloseMenu())
