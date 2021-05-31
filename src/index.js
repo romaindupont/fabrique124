@@ -14,7 +14,7 @@ const disparition = () => {
   const fenetreDisparition = document.querySelector('.disparition');
   //fenetreDisparition.style.transform = "translate(0%, -100%)";
   fenetreDisparition.style.display = 'none';
-  const titreApparition = document.querySelectorAll('.Titre');
+  const titreApparition = document.querySelectorAll('.StartPage');
   titreApparition.forEach(element => element.style.display = "block");
 }
 
@@ -31,6 +31,8 @@ const time = setTimeout(disparition,8000);
 const OpenCloseMenu = () => {
   const menuClick = document.querySelector('.menuB');
   menuClick.addEventListener('click', () => {
+    const menu = document.querySelector('.menuB');
+    menu.classList.toggle('menuB--open');
     const modal = document.querySelector('.menu-modal');
     modal.classList.toggle('menu-modal--open');
     const nav = document.querySelector('.menu-nav');

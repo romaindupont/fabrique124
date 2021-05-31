@@ -40,13 +40,16 @@ body {
   display: inline-block;
   height: 0;
   width: 0;
-  border-bottom: 150px solid #368a30;
-  border-left: 67px solid transparent;
+  border-bottom: 30px solid black;
+  border-left: 13px solid transparent;
   position: absolute;
-  top: 0;
+  top: -170px;
+  left: 29px;
+  transform: rotate3d(0,0,15, 90deg);
+
 }
 
-.div2 {
+/* .div2 {
   display: inline-block;
   height: 0;
   width: 0;
@@ -55,21 +58,22 @@ body {
   position: absolute;
   top: 15px;
   left: 6px;
-}
+} */
 
 .div3 {
   display: inline-block;
   height: 0;
   width: 0;
-  border-bottom: 150px solid white;
-  border-left: 67px solid transparent;
-  transform: rotate3d(0, 0, 15, 180deg);
+  border-bottom: 30px solid black;
+  border-left: 13px solid transparent;
+  transform: rotate3d(0, 0, 15, 270deg);
   position: absolute;
-  top: 150px;
-  left: 68px;
+  top: -150px;
+  left: 28px;
+
 }
 
-.div4 {
+/* .div4 {
   display: inline-block;
   height: 0;
   width: 0;
@@ -80,7 +84,7 @@ body {
   top: 153px;
   left: 72px;
 }
-
+ */
 @keyframes rotationLogo {
   from {
     transform: rotate(0deg);
@@ -160,8 +164,8 @@ main {
  }
 
 .Titre {
-  display: none;
-  width: 50%;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .app-menu {
@@ -174,53 +178,28 @@ main {
   display: inline-block;
   height: 0;
   width: 0;
-  border-top: 200px solid #368a30;
+  border-top: 200px solid #99cc99;
   border-right: 100px solid transparent;
   top: 0;
   left: 0;
-    &-burger{
-      position: fixed;
-      top: 40px;
-      left: 40px;
-      transform: translate(-50%, -50%);
-      display: inline-block;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.75;
-      }
+  cursor: pointer;
+  &:hover > .div1 {
+    top: -180px;
+    left: 15px;
+    transform: rotate3d(0, 0, 15, 0deg);
+  }
 
-      &-bar1 {
-          display: block;
-          width:32px;
-          height:5px;
-          background-color:#000;
-          margin:6px 0;
-          transition:0.4s;
-      }
-      &-bar2 {
-          width:32px;
-          height:5px;
-          background-color:#000;
-          margin:6px 0;
-          transition:0.4s;   
-      }
-      &-bar3 {
-          width:32px;
-          height:5px;
-          background-color:#000;
-          margin:6px 0;
-          transition:0.4s;  
-      }
-    }
-.menu-burger--open-bar2 {
-  opacity:0;
-}
-.menu-burger--open-bar1 {
-  transform:rotate(-45deg) translate(-9px, 6px);
-}
-.menu-burger--open-bar3 {
-  transform:rotate(45deg) translate(-8px, -8px);
-}
+  &:hover > .div3 {
+    transform: rotate3d(0, 0, 15, 180deg);
+  }
+  &--open > .div1 {
+    top: -180px;
+    left: 15px;
+    transform: rotate3d(0, 0, 15, 0deg);
+  }
+  &--open > .div3 {
+    transform: rotate3d(0, 0, 15, 180deg);
+  }
 }
 
 .menu-modal {
@@ -315,4 +294,15 @@ main {
   100% {
     opacity: 1;
   }
+}
+.StartPage {
+  display: none;
+}
+.StartPage-image {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+.premierePage {
+  background: #f0efeb;
 }
