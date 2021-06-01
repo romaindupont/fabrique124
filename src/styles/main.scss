@@ -288,10 +288,10 @@ main {
     font-size: 1.2rem;
   } */
 }
-/* .menu-nav--link:hover:nth-child(1) > .menu-modal-img {
-  display: block;
-  width: 20%;
-} */
+.menu-nav--link-img {
+  background: url('../assets/Illustrations/image.png');
+  width: 10%;
+}
 @keyframes apparition {
   0% {
     padding-left: 0;
@@ -313,6 +313,28 @@ main {
   background: #f0efeb;
 }
 
-/* .menu-modal-img {
-  display: none;
-} */
+.imageMove {
+  width: 100px;
+  height: 100px;
+  background: red;
+  /* border-radius: 50%; */
+  border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  animation: borderMove 6s ease-in 1s infinite alternate;
+}
+@keyframes borderMove {
+  0% {
+    border-radius:70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+  25% {
+    border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius:70% 70% 30% 70% / 30% 30% 30% 30%;
+  }
+  75% {
+    border-radius:30% 30% 30% 30% / 30% 30% 70% 70%;
+  }
+  100% {
+    border-radius:70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+}

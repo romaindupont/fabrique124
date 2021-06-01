@@ -1,6 +1,6 @@
 import { forEach } from 'lodash';
 import './styles/main.scss';
-//import { menu, menu1, triangle } from './js/menu.js';
+import { menuComplet } from './js/menu.js';
 
 const heading = document.createElement('h1')
 heading.textContent = 'Romain Dupont Webpack Config'
@@ -21,13 +21,26 @@ const disparition = () => {
 const AddLogo = () => {
   const premPage = document.querySelector('.disparition');
   const image = document.createElement('IMG')
-  image.setAttribute('src', '../src/assets/Logos/La_fabrique_simple.png');
+  image.setAttribute('src', '../src/assets/Logos/La_fabrique_simpleS.png');
   image.className = "lafabrique-logo";
   premPage.append(image);
 }
 const time2 = setTimeout(AddLogo,3000)
 const time = setTimeout(disparition,8000);
 
+/* const appearImage = () => {
+  const link = document.querySelector('.menu-nav--link'); 
+  link.addEventListener('mouseover', () => {
+    const modalOpen = document.querySelector('.menu-modal--open');
+    const img = document.createElement('IMG')
+    img.setAttribute('src', '../src/assets/Illustrations/image.png');
+    modalOpen.append(img)
+  })
+  link.addEventListener('mouseout', () => {
+    const modalOpenImg = document.querySelector('.menu-modal--open > img');
+    modalOpenImg.style.display ='none'
+  })
+} */
 const OpenCloseMenu = () => {
   const menuClick = document.querySelector('.menuB');
   menuClick.addEventListener('click', () => {
@@ -37,20 +50,10 @@ const OpenCloseMenu = () => {
     modal.classList.toggle('menu-modal--open');
     const nav = document.querySelector('.menu-nav');
     nav.classList.toggle('menu-nav--open');
-    const link = document.querySelector('.menu-nav--link'); 
-    link.addEventListener('mouseover', () => {
-      const modalOpen = document.querySelector('.menu-modal--open');
-      const img = document.createElement('IMG')
-      img.setAttribute('src', '../src/assets/Illustrations/image.png');
-      modalOpen.append(img)
-    })
-    link.addEventListener('mouseout', () => {
-      const modalOpenImg = document.querySelector('.menu-modal--open > img');
-      modalOpenImg.style.display ='none'
-    })
+    
   })
 }
 
 
 
-app.append(time, time2, OpenCloseMenu())
+app.append(time, time2, OpenCloseMenu(),menuComplet)
