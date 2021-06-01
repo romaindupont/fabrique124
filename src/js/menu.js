@@ -17,7 +17,7 @@ const menu = {
           {opacity: '0.5',width:'50px', height:'70px'},
           {opacity: '1',width:'100px', height:'100px'}
         ],{
-          duration: 3000,
+          duration: 5000,
         })
         lien.append(div);
     }))

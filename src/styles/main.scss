@@ -338,3 +338,64 @@ main {
     border-radius:70% 30% 30% 70% / 70% 70% 30% 30%;
   }
 }
+.section1 {
+  display: flex;
+  width: 100vw;
+}
+.section1-img1 {
+ background: red;
+  width: 20%;
+  height: 100vh;
+  transform:skewX(-25deg);
+  transition: width 300ms;
+  &:hover {
+    /* width: 100vw */
+    width: 4000px;
+    /* transform:skewX(-25deg) scale(1.5); */
+  }
+}
+.section1-img2 {
+  background: green;
+  width: 20%;
+  height: 100vh;
+  transform:skewX(-25deg);
+  transition: width 300ms;
+  &:hover {
+    /* width: 4000px; */
+    width: 4000px;
+    /* transform:skewX(-25deg) scale(1.5); */
+  }
+}
+.section1-img3 {
+  background: yellow;
+  width: 20%;
+  height: 100vh;
+  transform:skewX(-25deg);
+  transition: width 300ms;
+  &:hover {
+    width: 4000px;
+    /* transform:skewX(-25deg) scale(1.5); */
+  }
+}
+.section1-img4 {
+  background: blue;
+  width: 20%;
+  height: 100vh;
+  transform:skewX(-25deg);
+  transition: width 300ms;
+  &:hover {
+    width: 4000px;
+    /* transform:skewX(-25deg) scale(1.5); */
+  }
+}
+.section1-img5 {
+  background: white;
+  width: 20%;
+  height: 100vh;
+  transform:skewX(-25deg);
+  transition: width 300ms;
+  &:hover {
+    width: 4000px;
+    /* transform:skewX(-25deg) scale(1.5); */
+  }
+}
