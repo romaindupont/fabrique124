@@ -27,12 +27,6 @@ const menu = {
     link.forEach(lien => 
       lien.addEventListener('mouseout', (e) => {
         const removeDiv = document.querySelector('.imageMove');
-/*         removeDiv.animate([
-          {opacity: '1'},
-          {opacity: '0'}
-        ],{
-          duration: 3000,
-        }) */
         removeDiv.remove()
     }))
   }
