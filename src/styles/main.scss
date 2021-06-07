@@ -350,11 +350,14 @@ main {
   width: 20%;
   height: 100vh;
   transform:skewX(-25deg);
-  transition: width 600ms;
+  transition: width 800ms;
   position: absolute;
   left: -330px;
-  background-size: contain;
-  background-position: top;
+  background-size: cover;
+  background-position: center;
+  /* &-img {
+    background-image: url('../assets/Illustrations/bg1.jpeg');
+  } */
   &:hover {
     /* width: 100vw */
     z-index: 1;
@@ -362,21 +365,32 @@ main {
   }
 }
 .section1-img2 {
-  background: green;
-  background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
-  background-size: contain;
-  background-position: top;
+  /* background: green; */
+  background-image: url('../assets/Illustrations/bg1.jpeg');
+  background-size: cover;
+  background-position: center;
   width: 20%;
   height: 100vh;
   transform:skewX(-25deg);
-  transition: width 600ms;
+  transition: width 800ms;
   position: absolute;
+  filter: grayscale(1.5) blur(2px);
   left: 0;
+  &-img {
+    background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
+    width: 141%;
+    height: 100vh;
+    transform: skewX(25deg);
+    background-size: cover;
+    background-position: center;
+    
+  }
   &:hover {
     /* width: 4000px; */
-    width: 4000px;
+    width: 500px;
     z-index: 1;
     /* transform:skewX(-25deg) scale(1.5); */
+    filter: none;
   }
 }
 .section1-img3 {
@@ -384,7 +398,7 @@ main {
   width: 20%;
   height: 100vh;
   transform:skewX(-25deg);
-  transition: width 300ms;
+  transition: width 800ms;
   &:hover {
     width: 4000px;
     z-index: 1;
@@ -396,7 +410,7 @@ main {
   width: 20%;
   height: 100vh;
   transform:skewX(-25deg);
-  transition: width 300ms;
+  transition: width 800ms;
   &:hover {
     width: 4000px;
     z-index: 1;
@@ -408,7 +422,7 @@ main {
   width: 20%;
   height: 100vh;
   transform:skewX(-25deg);
-  transition: width 300ms;
+  transition: width 800ms;
   &:hover {
     width: 4000px;
     z-index: 1;
