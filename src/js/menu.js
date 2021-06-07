@@ -22,6 +22,25 @@ const menu = {
         lien.append(div);
     }))
   },
+ /*  appearImage: function(){
+    const link = document.querySelectorAll('.menu-nav--link'); 
+    link.forEach(lien =>
+      lien.addEventListener('mouseover', (e) => {
+        const div = document.createElement('div');
+        div.className='imageMoveBis';
+        div.style.position ='absolute';
+        div.style.right="-100px";
+        div.style.top=`0px`;
+        div.animate([
+          {opacity: '0',width:'0px', height:'0px'},
+          {opacity: '0.5',width:'50px', height:'70px'},
+          {opacity: '1',width:'150px', height:'150px'}
+        ],{
+          duration: 5000,
+        })
+        lien.append(div);
+    }))
+  }, */
   cacheImage: function(){
     const link = document.querySelectorAll('.menu-nav--link');
     link.forEach(lien => 
