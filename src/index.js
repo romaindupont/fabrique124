@@ -1,6 +1,7 @@
 import { forEach } from 'lodash';
 import './styles/main.scss';
 import { menuComplet } from './js/menu.js';
+import { voitureEssai } from './js/voiture';
 
 const heading = document.createElement('h1')
 heading.textContent = 'Romain Dupont Webpack Config'
@@ -56,4 +57,4 @@ const OpenCloseMenu = () => {
 
 
 
-app.append(time, time2, OpenCloseMenu(),menuComplet)
+app.append(time, time2, OpenCloseMenu(),menuComplet, voitureEssai)

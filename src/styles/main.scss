@@ -42,7 +42,8 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate3d(0,8,1,360deg) scale(1.5);
+    transform: rotate(360deg);
+    /* transform: rotate3d(0,8,1,360deg) scale(1.5); */
   }
 }
 
@@ -343,7 +344,7 @@ main {
 }
 .imageMoveBis {
   width: 100px;
-  height: 100px;
+  height: 200px;
   background: red;
   background-image: url('../assets/Illustrations/bg2.jpeg');
   background-size: cover;
@@ -445,5 +446,21 @@ main {
     width: 500px;
     z-index: 1;
     /* transform:skewX(-25deg) scale(1.5); */
+  }
+}
+.bg1-container {
+  position: relative;
+
+  &-cible {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 130px;
+    left: 80px;
+    &:hover {
+      border: 2px solid red;
+    }
   }
 }
