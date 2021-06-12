@@ -1,5 +1,6 @@
 $font-size: 1rem;
 $font-color: lch(53 105 40);
+$red: red;
 
 html {
   font-size: $font-size;
@@ -102,7 +103,7 @@ main {
 }
 
 .static {
-  background: #99cc99;
+  background: #14591D;
 }
 
  .bg2::after {
@@ -160,7 +161,7 @@ main {
   display: inline-block;
   height: 0;
   width: 0;
-  border-top: 200px solid #99cc99;
+  border-top: 200px solid #14591D;
   border-right: 100px solid transparent;
   top: 0;
   left: 0;
@@ -311,7 +312,7 @@ main {
   margin: auto;
 }
 .premierePage {
-  background: #f0efeb;
+  background: #F4D58D;
 }
 
 .imageMove {
@@ -376,7 +377,7 @@ main {
 } */
 .section1-img2 {
   /* background: green; */
-  background-image: url('../assets/Illustrations/bg1.jpeg');
+  background-image: url('../assets/PNG/casablanca_vector_small.png');
   background-size: cover;
   background-position: center;
   width: 20%;
@@ -388,21 +389,44 @@ main {
   left: 0;
   &-img {
     background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
-    width: 141%;
+    width: 170%;
     height: 100vh;
     transform: skewX(25deg);
     background-size: cover;
     background-position: center;
   }
   &:hover {
-    width: 500px;
+    width: 800px;
     z-index: 1;
     filter: none;
   }
 }
 .section1-img3 {
   /* background: yellow; */
-  background-image: url('../assets/Illustrations/bg2.jpeg');
+  background-image: url('../assets/PNG/Paris_vector_small.png');
+  background-size: cover;
+  background-position: center;
+  width: 20%;
+  height: 100vh;
+  transform:skewX(-25deg);
+  transition: width 800ms;
+  /* filter: grayscale(1.5) blur(2px); */
+  &-img {
+    background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
+    width: 170%;
+    height: 100vh;
+    transform: skewX(25deg);
+    background-size: cover;
+    background-position: center;
+  }
+  &:hover {
+    width: 800px;
+    z-index: 1;
+    filter: none;
+  }
+}
+.section1-img4 {
+  background-image: url('../assets/PNG/Paris_vector_small.png');
   background-size: cover;
   background-position: center;
   width: 20%;
@@ -412,40 +436,41 @@ main {
   filter: grayscale(1.5) blur(2px);
   &-img {
     background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
-    width: 141%;
+    width: 170%;
     height: 100vh;
     transform: skewX(25deg);
     background-size: cover;
     background-position: center;
   }
   &:hover {
-    width: 500px;
+    width: 800px;
     z-index: 1;
     filter: none;
-  }
-}
-.section1-img4 {
-  background: blue;
-  width: 20%;
-  height: 100vh;
-  transform:skewX(-25deg);
-  transition: width 800ms;
-  &:hover {
-    width: 500px;
-    z-index: 1;
     /* transform:skewX(-25deg) scale(1.5); */
   }
 }
 .section1-img5 {
-  background: white;
+  /* background: green; */
+  background-image: url('../assets/PNG/casablanca_vector_small.png');
+  background-size: cover;
+  background-position: center;
   width: 20%;
   height: 100vh;
-  transform:skewX(-25deg);
+  transform: skewX(-25deg);
   transition: width 800ms;
+  filter: grayscale(1.5) blur(2px);
+  &-img {
+    background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
+    width: 170%;
+    height: 100vh;
+    transform: skewX(25deg);
+    background-size: cover;
+    background-position: center;
+  }
   &:hover {
-    width: 500px;
+    width: 800px;
     z-index: 1;
-    /* transform:skewX(-25deg) scale(1.5); */
+    filter: none;
   }
 }
 .bg1-container {
@@ -463,4 +488,14 @@ main {
       border: 2px solid red;
     }
   }
+}
+.StartPage-logo {
+  width: 20%;
+  margin: auto;
+
+}
+
+.StartPage-container {
+ text-align: center;
+ margin-top: 4rem;
 }

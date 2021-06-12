@@ -3,7 +3,7 @@ const menu = {
     menu.appearImage();
     menu.cacheImage()
   },
-  /* appearImage: function(){
+  appearImage: function(){
     const link = document.querySelectorAll('.menu-nav--link'); 
     link.forEach(lien =>
       lien.addEventListener('mouseover', (e) => {
@@ -21,8 +21,8 @@ const menu = {
         })
         lien.append(div);
     }))
-  }, */
-  appearImage: function(){
+  },
+/*   appearImage: function(){
     const link = document.querySelectorAll('.menu-nav--link'); 
     link.forEach(lien =>
       lien.addEventListener('mouseover', (e) => {
@@ -40,7 +40,7 @@ const menu = {
         })
         lien.append(div);
     }))
-  },
+  }, */
   cacheImage: function(){
     const link = document.querySelectorAll('.menu-nav--link');
     link.forEach(lien => 

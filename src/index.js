@@ -22,7 +22,8 @@ const disparition = () => {
 const AddLogo = () => {
   const premPage = document.querySelector('.disparition');
   const image = document.createElement('IMG')
-  image.setAttribute('src', '../src/assets/Logos/La_fabrique_simple.png');
+  /* image.setAttribute('src', '../src/assets/Logos/La_fabrique_simple.png'); */
+  image.setAttribute('src', '../src/assets/Illustrations/logo_profil1.png');
   image.className = "lafabrique-logo";
   premPage.append(image);
 }
