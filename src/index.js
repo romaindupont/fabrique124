@@ -10,10 +10,12 @@ heading.textContent = 'Romain Dupont Webpack Config'
 const app = document.querySelector('#root')
 
 const disparition = () => {
+  const menu = document.querySelector('.app-menu');
+  menu.style.display = 'block';
   const anime = document.querySelector('.menu');
   anime.style.display = 'none';
   const fenetreDisparition = document.querySelector('.disparition');
-  //fenetreDisparition.style.transform = "translate(0%, -100%)";
+/*   fenetreDisparition.style.transform = "translate(0%, -100%)"; */
   fenetreDisparition.style.display = 'none';
   const titreApparition = document.querySelectorAll('.StartPage');
   titreApparition.forEach(element => element.style.display = "block");

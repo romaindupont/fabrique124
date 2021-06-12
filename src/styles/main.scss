@@ -33,8 +33,8 @@ body {
 .lafabrique-logo {
 /*   position: absolute;
   top: -80px;
-  right: 0;
-  width: 500px; */
+  right: 0;*/
+  width: 500px; 
   animation: 5s ArriveeFabriqueLogo;
 }
 
@@ -123,6 +123,7 @@ main {
 }
 
 .app-menu {
+  display: none;
   z-index: 1;
   position: relative;
   background-color: #000;
@@ -307,7 +308,7 @@ main {
   display: none;
 }
 .StartPage-image {
-  width: 50%;
+  width: 30%;
   display: block;
   margin: auto;
 }
@@ -388,8 +389,7 @@ main {
   filter: grayscale(1.5) blur(2px);
   left: 0;
   &-img {
-    background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
-    width: 170%;
+
     height: 100vh;
     transform: skewX(25deg);
     background-size: cover;
@@ -399,6 +399,10 @@ main {
     width: 800px;
     z-index: 1;
     filter: none;
+    & > .section1-img2-img {
+      background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
+      width: 170%;
+    }
   }
 }
 .section1-img3 {
@@ -412,8 +416,7 @@ main {
   transition: width 800ms;
   /* filter: grayscale(1.5) blur(2px); */
   &-img {
-    background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
-    width: 170%;
+
     height: 100vh;
     transform: skewX(25deg);
     background-size: cover;
@@ -423,6 +426,10 @@ main {
     width: 800px;
     z-index: 1;
     filter: none;
+    & > .section1-img3-img {
+      background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
+      width: 170%;
+    }
   }
 }
 .section1-img4 {
@@ -435,8 +442,6 @@ main {
   transition: width 800ms;
   filter: grayscale(1.5) blur(2px);
   &-img {
-    background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
-    width: 170%;
     height: 100vh;
     transform: skewX(25deg);
     background-size: cover;
@@ -446,7 +451,10 @@ main {
     width: 800px;
     z-index: 1;
     filter: none;
-    /* transform:skewX(-25deg) scale(1.5); */
+    & > .section1-img4-img {
+      background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
+      width: 170%;
+    }
   }
 }
 .section1-img5 {
@@ -460,8 +468,7 @@ main {
   transition: width 800ms;
   filter: grayscale(1.5) blur(2px);
   &-img {
-    background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
-    width: 170%;
+    
     height: 100vh;
     transform: skewX(25deg);
     background-size: cover;
@@ -471,6 +478,10 @@ main {
     width: 800px;
     z-index: 1;
     filter: none;
+    & > .section1-img5-img {
+      background-image: url('../assets/Illustrations/IMG_8302-removebg-preview.png');
+      width: 170%;
+    }
   }
 }
 .bg1-container {
@@ -497,5 +508,5 @@ main {
 
 .StartPage-container {
  text-align: center;
- margin-top: 4rem;
+ margin-top: 10rem;
 }
