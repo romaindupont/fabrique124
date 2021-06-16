@@ -1,7 +1,10 @@
-import { forEach } from 'lodash';
+import { forEach, initial } from 'lodash';
 import './styles/main.scss';
 import { menuComplet } from './js/menu.js';
 import { voitureEssai } from './js/voiture';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 
 const heading = document.createElement('h1')
 heading.textContent = 'Romain Dupont Webpack Config'
@@ -58,6 +61,68 @@ const OpenCloseMenu = () => {
   })
 }
 
+const loader = new GLTFLoader();
+
+loader.load( '../src/assets/d/ferrari.glb', function ( gltf ) {
+
+	scene.add( gltf.scene );
+
+}, undefined, function ( error ) {
+
+	console.error( error );
+
+} );
+
+const essai = () => {
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  document.body.appendChild( renderer.domElement );
+  const loader = new GLTFLoader();
+  /* dracoLoader.setDecoderPath( 'src/three/examples/js/libs/draco/' ); */
+  THREE.DRACOLoader.setDecoderPath('./path/to/decoder/');
+  const dracoLoader = new DRACOLoader()
+  loader.setDRACOLoader( dracoLoader );
+  /* loader.setDRACOLoader( new DRACOLoader() ); */
+  loader.load('../src/assets/d/ferrari.glb', function (gltf) {
+
+      scene.add(gltf.scene);
+      gltf.animations; 
+      gltf.scene;
+      gltf.scenes; 
+      gltf.cameras; 
+      gltf.asset;
 
 
-app.append(time, time2, OpenCloseMenu(),menuComplet, voitureEssai)
+  },
+
+  function (xhr) {
+      console.log((xhr.loaded / xhr.total * 100 ) + '% loaded' );
+  },
+
+  function (error) {
+      console.log( 'An error happened = ', error );
+  }
+);
+
+ /*  var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+  var cube = new THREE.Mesh( loader );
+  scene.add( cube );
+
+  camera.position.z = 5;
+
+  var animate = function () {
+    requestAnimationFrame( animate );
+
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+
+    renderer.render( scene, camera );
+  };
+
+  animate(); */
+}
+
+app.append(time, time2, OpenCloseMenu(),menuComplet, voitureEssai, essai())
