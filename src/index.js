@@ -5,6 +5,8 @@ import { voitureEssai } from './js/voiture';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 
 const heading = document.createElement('h1')
 heading.textContent = 'Romain Dupont Webpack Config'
@@ -61,41 +63,110 @@ const OpenCloseMenu = () => {
   })
 }
 
-const loader = new GLTFLoader();
-
-loader.load( '../src/assets/d/ferrari.glb', function ( gltf ) {
-
-	scene.add( gltf.scene );
-
-}, undefined, function ( error ) {
-
-	console.error( error );
-
-} );
 
 const essai = () => {
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-
-  var renderer = new THREE.WebGLRenderer();
+/*   const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+  const container = document.getElementById( 'container' );
+  const renderer = new THREE.WebGLRenderer();
   renderer.setSize( window.innerWidth, window.innerHeight );
-  document.body.appendChild( renderer.domElement );
-  const loader = new GLTFLoader();
-  /* dracoLoader.setDecoderPath( 'src/three/examples/js/libs/draco/' ); */
-  THREE.DRACOLoader.setDecoderPath('./path/to/decoder/');
-  const dracoLoader = new DRACOLoader()
-  loader.setDRACOLoader( dracoLoader );
-  /* loader.setDRACOLoader( new DRACOLoader() ); */
-  loader.load('../src/assets/d/ferrari.glb', function (gltf) {
+  container.appendChild( renderer.domElement ); */
+  const wheels = [];
+  const container = document.getElementById( 'container' );
+  const renderer = new THREE.WebGLRenderer( { antialias: true } );
+  renderer.setPixelRatio( window.devicePixelRatio );
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.setAnimationLoop( render );
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 0.85;
+  container.appendChild( renderer.domElement );
 
-      scene.add(gltf.scene);
-      gltf.animations; 
-      gltf.scene;
+  /* window.addEventListener( 'resize', onWindowResize ); */
+  const camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 0.1, 100 );
+  camera.position.set( 4.25, 1.4, - 4.5 );
+
+  const controls = new OrbitControls( camera, container );
+  controls.target.set( 0, 0.5, 0 );
+  controls.update();
+
+  const pmremGenerator = new THREE.PMREMGenerator( renderer );
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color( 0xeeeeee );
+  scene.environment = pmremGenerator.fromScene( new RoomEnvironment() ).texture;
+  scene.fog = new THREE.Fog( 0xeeeeee, 10, 50 );
+
+  const grid = new THREE.GridHelper( 100, 40, 0x000000, 0x000000 );
+  grid.material.opacity = 0.1;
+  grid.material.depthWrite = false;
+  grid.material.transparent = true;
+  scene.add( grid );
+    const bodyMaterial = new THREE.MeshPhysicalMaterial( {
+      color: 0xff0000, metalness: 0.6, roughness: 0.4, clearcoat: 0.05, clearcoatRoughness: 0.05
+    } );
+
+    const detailsMaterial = new THREE.MeshStandardMaterial( {
+      color: 0xffffff, metalness: 1.0, roughness: 0.5
+    } );
+
+    const glassMaterial = new THREE.MeshPhysicalMaterial( {
+      color: 0xffffff, metalness: 0, roughness: 0.1, transmission: 0.9, transparent: true
+    } );
+
+    const bodyColorInput = document.getElementById( 'body-color' );
+    /* bodyColorInput.addEventListener( 'input', function () {
+
+      bodyMaterial.color.set( this.value );
+
+    } ); */
+
+    const detailsColorInput = document.getElementById( 'details-color' );
+    /* detailsColorInput.addEventListener( 'input', function () {
+
+      detailsMaterial.color.set( this.value );
+
+    } ); */
+
+    const glassColorInput = document.getElementById( 'glass-color' );
+    /* glassColorInput.addEventListener( 'input', function () {
+
+      glassMaterial.color.set( this.value );
+
+    } ); */
+  const loader = new GLTFLoader();
+  const dracoLoader = new DRACOLoader();
+  /* dracoLoader.setDecoderPath( 'src/three/examples/js/libs/draco/' ); */
+  dracoLoader.setDecoderPath('../src/assets/gltf/');
+  /* const dracoLoader = new DRACOLoader() */
+  /* loader.setDRACOLoader( dracoLoader ); */
+  loader.setDRACOLoader( dracoLoader );
+  loader.load('../src/assets/d/ferrari.glb', function (gltf) {
+    const carModel = gltf.scene.children[ 0 ];
+
+    carModel.getObjectByName( 'body' ).material = bodyMaterial;
+
+    carModel.getObjectByName( 'rim_fl' ).material = detailsMaterial;
+    carModel.getObjectByName( 'rim_fr' ).material = detailsMaterial;
+    carModel.getObjectByName( 'rim_rr' ).material = detailsMaterial;
+    carModel.getObjectByName( 'rim_rl' ).material = detailsMaterial;
+    carModel.getObjectByName( 'trim' ).material = detailsMaterial;
+
+    carModel.getObjectByName( 'glass' ).material = glassMaterial;
+    wheels.push(
+      carModel.getObjectByName( 'wheel_fl' ),
+      carModel.getObjectByName( 'wheel_fr' ),
+      carModel.getObjectByName( 'wheel_rl' ),
+      carModel.getObjectByName( 'wheel_rr' )
+    );
+      /* scene.add(gltf.scene);
+      /* gltf.animations;  */
+     /*  gltf.scene;
       gltf.scenes; 
       gltf.cameras; 
-      gltf.asset;
+      gltf.asset; */
 
-
+      scene.add( carModel );
   },
 
   function (xhr) {
@@ -107,6 +178,27 @@ const essai = () => {
   }
 );
 
+const onWindowResize = () => {
+
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+function render() {
+
+  const time = - performance.now() / 1000;
+
+  for ( let i = 0; i < wheels.length; i ++ ) {
+
+    wheels[ i ].rotation.x = time * Math.PI;
+
+  }
+
+  grid.position.z = - ( time ) % 5;
+
+  renderer.render( scene, camera );
  /*  var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
   var cube = new THREE.Mesh( loader );
   scene.add( cube );
@@ -123,6 +215,7 @@ const essai = () => {
   };
 
   animate(); */
+}
 }
 
 app.append(time, time2, OpenCloseMenu(),menuComplet, voitureEssai, essai())
