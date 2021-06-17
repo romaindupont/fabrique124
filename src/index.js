@@ -93,19 +93,18 @@ const essai = () => {
   const pmremGenerator = new THREE.PMREMGenerator( renderer );
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color( 0xeeeeee );
+  scene.background = new THREE.Color( 0x000000 );
   scene.environment = pmremGenerator.fromScene( new RoomEnvironment() ).texture;
   scene.fog = new THREE.Fog( 0xeeeeee, 10, 50 );
 
-  const grid = new THREE.GridHelper( 100, 40, 0x000000, 0x000000 );
+  const grid = new THREE.GridHelper( 80, 0, 0xeeeeee, 0xeeeeee );
   grid.material.opacity = 0.1;
-  grid.material.depthWrite = false;
+  grid.material.depthWrite = true;
   grid.material.transparent = true;
   scene.add( grid );
     const bodyMaterial = new THREE.MeshPhysicalMaterial( {
       color: 0xff0000, metalness: 0.6, roughness: 0.4, clearcoat: 0.05, clearcoatRoughness: 0.05
     } );
-
     const detailsMaterial = new THREE.MeshStandardMaterial( {
       color: 0xffffff, metalness: 1.0, roughness: 0.5
     } );
@@ -115,25 +114,26 @@ const essai = () => {
     } );
 
     const bodyColorInput = document.getElementById( 'body-color' );
-    /* bodyColorInput.addEventListener( 'input', function () {
+    bodyColorInput.addEventListener( 'input', function () {
 
       bodyMaterial.color.set( this.value );
 
-    } ); */
+    } );
 
     const detailsColorInput = document.getElementById( 'details-color' );
-    /* detailsColorInput.addEventListener( 'input', function () {
+    detailsColorInput.addEventListener( 'input', function () {
 
       detailsMaterial.color.set( this.value );
 
-    } ); */
+    } );
 
     const glassColorInput = document.getElementById( 'glass-color' );
-    /* glassColorInput.addEventListener( 'input', function () {
+    glassColorInput.addEventListener( 'input', function () {
 
       glassMaterial.color.set( this.value );
 
-    } ); */
+    } );
+
   const loader = new GLTFLoader();
   const dracoLoader = new DRACOLoader();
   /* dracoLoader.setDecoderPath( 'src/three/examples/js/libs/draco/' ); */
