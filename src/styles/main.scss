@@ -133,7 +133,7 @@ main {
   display: inline-block;
   height: 4px;
   width: 6px;
-  border-bottom: 30px solid black;
+  border-bottom: 30px solid #fff;
   border-left: 0px solid transparent;
   position: absolute;
   top: -170px;
@@ -147,7 +147,7 @@ main {
   display: inline-block;
   height: 4px;
   width: 6px;
-  border-bottom: 30px solid black;
+  border-bottom: 30px solid #fff;
   border-left: 0px solid transparent;
   transform: rotate3d(0, 0, 15, 270deg);
   position: absolute;
@@ -162,7 +162,7 @@ main {
   display: inline-block;
   height: 0;
   width: 0;
-  border-top: 200px solid #14591D;
+  border-top: 200px solid #37665E;
   border-right: 100px solid transparent;
   top: 0;
   left: 0;
@@ -274,6 +274,12 @@ main {
   &:nth-child(4) {
     padding-left: 3.2rem;
   }
+  &:nth-child(5) {
+    padding-left: 2.5rem;
+  }
+  &:nth-child(6) {
+    padding-left: 1.5rem;
+  }
   /* @media only screen and (max-width: 690px) {
     width: 100%;
     padding-top: 0.3rem;
@@ -307,13 +313,25 @@ main {
 .StartPage {
   display: none;
 }
-.StartPage-image {
+.StartPage-image-1 {
   width: 30%;
   display: block;
   margin: auto;
+  position: absolute;
+  right: 250px;
+  bottom: 0px;
+  z-index: 1;
+}
+.StartPage-image-2 {
+  width: 25%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  bottom: 50px;
+  left: 320px;
 }
 .premierePage {
-  background: #F4D58D;
+  background: #fff;
 }
 
 .imageMove {
@@ -501,12 +519,51 @@ main {
   }
 }
 .StartPage-logo {
-  width: 20%;
+  width: 15%;
   margin: auto;
 
 }
 
 .StartPage-container {
  text-align: center;
- margin-top: 10rem;
+
+ &-logo {
+  position: fixed;
+  top: 20px;
+ }
+ &-title {
+  letter-spacing: 4px;
+  font-family: fantasy;
+  text-transform: uppercase;
+  font-size: 4rem;
+  position: absolute;
+  left: 40px;
+  top: 125px;
+  z-index: 1;
+  text-shadow: 5px -2px white;
+ }
+ &-fond {
+  background: #EEEEEE;
+  height: 500px;
+  width: 100vw;
+  margin-top: 8rem;
+ }
+}
+.triangle1 {
+  display: inline-block;
+  border-bottom: 295px solid #fff;
+  border-left: 125px solid transparent;
+  position: absolute;
+  transform: rotate(-180deg);
+  top: 75px;
+  left: -2px;
+}
+.triangle2 {
+  display: inline-block;
+  border-bottom: 295px solid #fff;
+  border-left: 125px solid transparent;
+  position: absolute;
+  transform: rotate(0deg);
+  bottom: -5px;
+  right: -2px;
 }
