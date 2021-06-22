@@ -98,12 +98,12 @@ const essai = () => {
   scene.fog = new THREE.Fog( 0xeeeeee, 10, 50 );
 
   const grid = new THREE.GridHelper( 100, 40, 0x000000, 0x000000 );
-  grid.material.opacity = 0.1;
+  grid.material.opacity = 0;
   grid.material.depthWrite = false;
   grid.material.transparent = true;
   scene.add( grid );
     const bodyMaterial = new THREE.MeshPhysicalMaterial( {
-      color: 0xff0000, metalness: 0.6, roughness: 0.4, clearcoat: 0.05, clearcoatRoughness: 0.05
+      color: 0xff0000, metalness: 0.6, roughness: 0.5, clearcoat: 0.05, clearcoatRoughness: 0.05
     } );
 
     const detailsMaterial = new THREE.MeshStandardMaterial( {
@@ -192,7 +192,7 @@ function render() {
 
   for ( let i = 0; i < wheels.length; i ++ ) {
 
-    wheels[ i ].rotation.x = time * Math.PI;
+    wheels[ i ].rotation.x = time;
 
   }
 
