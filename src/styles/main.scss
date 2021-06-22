@@ -103,7 +103,7 @@ main {
 }
 
 .static {
-  background: #14591D;
+  background: #14571d;
 }
 
  .bg2::after {
@@ -314,7 +314,7 @@ main {
   display: none;
 }
 .StartPage-image-1 {
-  width: 30%;
+  width: 50%;
   display: block;
   margin: auto;
   position: absolute;
@@ -323,7 +323,7 @@ main {
   z-index: 1;
 }
 .StartPage-image-2 {
-  width: 25%;
+  width: 60%;
   display: block;
   margin: auto;
   position: absolute;
@@ -532,15 +532,15 @@ main {
   top: 20px;
  }
  &-title {
-  letter-spacing: 4px;
-  font-family: fantasy;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 4rem;
   position: absolute;
   left: 40px;
   top: 125px;
   z-index: 1;
-  text-shadow: 5px -2px white;
+  text-shadow: 0px -5px 0px white;
  }
  &-fond {
   background: #EEEEEE;

@@ -7,6 +7,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
+/* import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'; */
 
 const heading = document.createElement('h1')
 heading.textContent = 'Romain Dupont Webpack Config'
@@ -62,7 +63,39 @@ const OpenCloseMenu = () => {
     
   })
 }
+/* const essai2 = () => {
+  const container = document.getElementById( 'container' );
+  const renderer = new THREE.WebGLRenderer( );
+  renderer.setPixelRatio( window.devicePixelRatio );
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  container.appendChild( renderer.domElement );
+  // instantiate a loader
+const loader = new OBJLoader();
 
+// load a resource
+loader.load(
+	// resource URL
+	'../src/assets/d/spider.glb',
+	// called when resource is loaded
+	function ( object ) {
+
+		scene.add( object );
+
+	},
+	// called when loading is in progresses
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+} */
 
 const essai = () => {
 /*   const scene = new THREE.Scene();
@@ -93,7 +126,7 @@ const essai = () => {
   const pmremGenerator = new THREE.PMREMGenerator( renderer );
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color( 0x000000 );
+  scene.background = new THREE.Color( 0xeeeeee );
   scene.environment = pmremGenerator.fromScene( new RoomEnvironment() ).texture;
   scene.fog = new THREE.Fog( 0xeeeeee, 10, 50 );
 
@@ -103,7 +136,7 @@ const essai = () => {
   grid.material.transparent = true;
   scene.add( grid );
     const bodyMaterial = new THREE.MeshPhysicalMaterial( {
-      color: 0xff0000, metalness: 0.6, roughness: 0.4, clearcoat: 0.05, clearcoatRoughness: 0.05
+      color: 0x14571D, metalness: 0.6, roughness: 0.4, clearcoat: 0.05, clearcoatRoughness: 0.05
     } );
     const detailsMaterial = new THREE.MeshStandardMaterial( {
       color: 0xffffff, metalness: 1.0, roughness: 0.5
@@ -141,24 +174,25 @@ const essai = () => {
   /* const dracoLoader = new DRACOLoader() */
   /* loader.setDRACOLoader( dracoLoader ); */
   loader.setDRACOLoader( dracoLoader );
-  loader.load('../src/assets/d/ferrari.glb', function (gltf) {
-    const carModel = gltf.scene.children[ 0 ];
+  loader.load('../src/assets/d/spider.glb', function (gltf) {
+    const carModel = gltf.scene.children[2];
+   console.log(carModel)
 
-    carModel.getObjectByName( 'body' ).material = bodyMaterial;
+   /*  carModel.getObjectByName( 'body' ).material = bodyMaterial;
 
-    carModel.getObjectByName( 'rim_fl' ).material = detailsMaterial;
-    carModel.getObjectByName( 'rim_fr' ).material = detailsMaterial;
+    carModel.getObjectByName( 'tyre' ).material = detailsMaterial; */
+/*     carModel.getObjectByName( 'rim_fr' ).material = detailsMaterial;
     carModel.getObjectByName( 'rim_rr' ).material = detailsMaterial;
     carModel.getObjectByName( 'rim_rl' ).material = detailsMaterial;
-    carModel.getObjectByName( 'trim' ).material = detailsMaterial;
+    carModel.getObjectByName( 'trim' ).material = detailsMaterial; */
 
-    carModel.getObjectByName( 'glass' ).material = glassMaterial;
+   /*  carModel.getObjectByName( 'glass' ).material = glassMaterial;
     wheels.push(
-      carModel.getObjectByName( 'wheel_fl' ),
-      carModel.getObjectByName( 'wheel_fr' ),
+      carModel.getObjectByName( 'tyre' )
+/*       carModel.getObjectByName( 'wheel_fr' ),
       carModel.getObjectByName( 'wheel_rl' ),
-      carModel.getObjectByName( 'wheel_rr' )
-    );
+      carModel.getObjectByName( 'wheel_rr' ) */
+  /*   ); */
       /* scene.add(gltf.scene);
       /* gltf.animations;  */
      /*  gltf.scene;
