@@ -174,14 +174,23 @@ const essai = () => {
   /* const dracoLoader = new DRACOLoader() */
   /* loader.setDRACOLoader( dracoLoader ); */
   loader.setDRACOLoader( dracoLoader );
-  loader.load('../src/assets/d/spider.glb', function (gltf) {
+  loader.load('../src/assets/d/124_spider_1970.glb', function (gltf) {
     const carModel = gltf.scene.children[2];
     console.log(carModel)
-    /* carModel.getObjectByName( 'body' ).material = bodyMaterial; */
+     carModel.getObjectByName( 'Fiat70_Spider_body' ).material = bodyMaterial;
+     /* carModel.getObjectByName( 'Fiat70_Spider_body1' ).material = bodyMaterial; */
+      carModel.getObjectByName( 'Fiat70_Spider_body2' ).material = bodyMaterial;
+     carModel.getObjectByName( 'Fiat70_Spider_body3' ).material = bodyMaterial;
+     carModel.getObjectByName( 'Fiat70_Spider_body4' ).material = bodyMaterial;
+     carModel.getObjectByName( 'Fiat70_Spider_body5' ).material = bodyMaterial;
+     carModel.getObjectByName( 'Fiat70_Spider_body6' ).material = bodyMaterial;
+     /*carModel.getObjectByName( 'Fiat70_Spider_body7' ).material = bodyMaterial;
+     carModel.getObjectByName( 'Fiat70_Spider_body8' ).material = bodyMaterial; */
 
     /* carModel.getObjectByName( 'tyre' ).material = detailsMaterial; */
 /*     carModel.getObjectByName( 'rim_fr' ).material = detailsMaterial;
     carModel.getObjectByName( 'rim_rr' ).material = detailsMaterial;
+
     carModel.getObjectByName( 'rim_rl' ).material = detailsMaterial;
     carModel.getObjectByName( 'trim' ).material = detailsMaterial; */
 
