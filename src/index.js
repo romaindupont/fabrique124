@@ -116,8 +116,8 @@ const essai = () => {
   container.appendChild( renderer.domElement );
 
   /* window.addEventListener( 'resize', onWindowResize ); */
-  const camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 0.1, 100 );
-  camera.position.set( 4.25, 1.4, - 4.5 );
+  const camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  camera.position.set( -1.25, 12.4, 4.5 );
 
   const controls = new OrbitControls( camera, container );
   controls.target.set( 0, 0.5, 0 );
@@ -126,11 +126,11 @@ const essai = () => {
   const pmremGenerator = new THREE.PMREMGenerator( renderer );
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color( 0xeeeeee );
+  scene.background = new THREE.Color( 0x000000 );
   scene.environment = pmremGenerator.fromScene( new RoomEnvironment() ).texture;
-  scene.fog = new THREE.Fog( 0xeeeeee, 10, 50 );
+  /* scene.fog = new THREE.Fog( 0xeeeeee, 10, 100 );  */
 
-  const grid = new THREE.GridHelper( 80, 0, 0xeeeeee, 0xeeeeee );
+  const grid = new THREE.GridHelper( 10, 0, 0xeeeeee, 0xeeeeee );
   grid.material.opacity = 0.1;
   grid.material.depthWrite = true;
   grid.material.transparent = true;
@@ -176,11 +176,10 @@ const essai = () => {
   loader.setDRACOLoader( dracoLoader );
   loader.load('../src/assets/d/spider.glb', function (gltf) {
     const carModel = gltf.scene.children[2];
-   console.log(carModel)
+    console.log(carModel)
+    /* carModel.getObjectByName( 'body' ).material = bodyMaterial; */
 
-   /*  carModel.getObjectByName( 'body' ).material = bodyMaterial;
-
-    carModel.getObjectByName( 'tyre' ).material = detailsMaterial; */
+    /* carModel.getObjectByName( 'tyre' ).material = detailsMaterial; */
 /*     carModel.getObjectByName( 'rim_fr' ).material = detailsMaterial;
     carModel.getObjectByName( 'rim_rr' ).material = detailsMaterial;
     carModel.getObjectByName( 'rim_rl' ).material = detailsMaterial;
