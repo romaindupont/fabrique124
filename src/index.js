@@ -184,8 +184,9 @@ const essai = () => {
      carModel.getObjectByName( 'Fiat70_Spider_body4' ).material = bodyMaterial;
      carModel.getObjectByName( 'Fiat70_Spider_body5' ).material = bodyMaterial;
      carModel.getObjectByName( 'Fiat70_Spider_body6' ).material = bodyMaterial;
-     /*carModel.getObjectByName( 'Fiat70_Spider_body7' ).material = bodyMaterial;
-     carModel.getObjectByName( 'Fiat70_Spider_body8' ).material = bodyMaterial; */
+    
+     carModel.getObjectByName( 'Fiat70_Spider_body7' ).material = bodyMaterial;
+      /*carModel.getObjectByName( 'Fiat70_Spider_body8' ).material = bodyMaterial; */
 
     /* carModel.getObjectByName( 'tyre' ).material = detailsMaterial; */
 /*     carModel.getObjectByName( 'rim_fr' ).material = detailsMaterial;
