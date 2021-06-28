@@ -136,7 +136,7 @@ const essai = () => {
   grid.material.transparent = true;
   scene.add( grid );
     const bodyMaterial = new THREE.MeshPhysicalMaterial( {
-      color: 0x14571D, metalness: 0.6, roughness: 0.4, clearcoat: 0.05, clearcoatRoughness: 0.05
+      color: 0x37665E, metalness: 0.8, roughness: 0.5, clearcoat: 0.15, clearcoatRoughness: 0.05
     } );
     const detailsMaterial = new THREE.MeshStandardMaterial( {
       color: 0xffffff, metalness: 1.0, roughness: 0.5
@@ -184,8 +184,8 @@ const essai = () => {
      carModel.getObjectByName( 'Fiat70_Spider_body4' ).material = bodyMaterial;
      carModel.getObjectByName( 'Fiat70_Spider_body5' ).material = bodyMaterial;
      carModel.getObjectByName( 'Fiat70_Spider_body6' ).material = bodyMaterial;
-     /*carModel.getObjectByName( 'Fiat70_Spider_body7' ).material = bodyMaterial;
-     carModel.getObjectByName( 'Fiat70_Spider_body8' ).material = bodyMaterial; */
+     carModel.getObjectByName( 'Fiat70_Spider_body7' ).material = bodyMaterial;
+     /*carModel.getObjectByName( 'Fiat70_Spider_body8' ).material = bodyMaterial; */
 
     /* carModel.getObjectByName( 'tyre' ).material = detailsMaterial; */
 /*     carModel.getObjectByName( 'rim_fr' ).material = detailsMaterial;
