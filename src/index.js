@@ -116,9 +116,8 @@ const essai = () => {
   container.appendChild( renderer.domElement );
 
   /* window.addEventListener( 'resize', onWindowResize ); */
-  const camera = new THREE.PerspectiveCamera( 80, window.innerWidth / window.innerHeight, 0.1, 1000 );
-  camera.position.set( -1.25, 12.4, 4.5 );
-
+  const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  camera.position.set( -3.25, 8.4, 5.5 );
   const controls = new OrbitControls( camera, container );
   controls.target.set( 0, 0.5, 0 );
   controls.update();
@@ -126,7 +125,7 @@ const essai = () => {
   const pmremGenerator = new THREE.PMREMGenerator( renderer );
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color( 0x000000 );
+  scene.background = new THREE.Color( 0xeeeeee );
   scene.environment = pmremGenerator.fromScene( new RoomEnvironment() ).texture;
   /* scene.fog = new THREE.Fog( 0xeeeeee, 10, 100 );  */
 
