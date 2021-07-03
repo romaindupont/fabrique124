@@ -615,9 +615,9 @@ main {
   border-bottom: 295px solid #fff;
   border-left: 125px solid transparent;
   position: absolute;
-  transform: rotate(-180deg);
+  transform: rotate(-177deg);
   top: 0px;
-  left: -2px;
+  left: -5px;
 }
 
 .apropos-cube1 {
@@ -1121,7 +1121,7 @@ label > img {
   width: 10%;
 }
 input {
-  margin: 0 1rem;
+  margin: 0.8rem 1rem;
   border: none;
   background: #EEE;
   border-bottom: 1px solid #37665E;
@@ -1159,30 +1159,41 @@ form > div {
   transform: skew(20deg);
   left: 85px;
 }
-footer {
+.footer {
+  position: relative;
+  height: 20vh;
   display: flex;
   flex-direction: row;
-  background: red;
-  height: 200px;
+  background: white;
 }
 
 .footer-left {
   width: 30%;
   background: green;
-  height: 200px;
+  height: 20vh;
   transform: skew(-25deg);
 }
 .footer-right {
-  width: 60%;
-  height: 200px;
+  width: 63%;
+  height: 20vh;
   margin-left: 1rem;
-  background: yellow;
+  background: white;
+  border: 2px solid #37665E;
   transform: skew(-25deg);
 }
 .footer-triangle {
   position: absolute;
-  right: 46px;
-  transform: rotate(178deg);
-  border-top: 200px solid #37665E;
-  border-right: 100px solid transparent;
+  right: 40px;
+  transform: rotate(180deg);
+  border-top: 20vh solid #37665E;
+  border-right: 66px solid transparent;
+}
+
+.triangle-inside {
+  position: absolute;
+  right: -56px;
+  bottom: 18px;
+  transform: rotate(1deg);
+  border-top: 17vh solid white;
+  border-right: 51px solid transparent;
 }
