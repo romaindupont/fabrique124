@@ -1,7 +1,7 @@
 import { forEach, initial } from 'lodash';
 import './styles/main.scss';
-import { menuComplet } from './js/menu.js';
-import { voitureEssai } from './js/voiture';
+/* import { menuComplet } from './js/menu.js'; */
+/* import { voitureEssai } from './js/voiture'; */
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
@@ -260,4 +260,4 @@ function render() {
 }
 }
 
-app.append(time, time2, OpenCloseMenu(),menuComplet, voitureEssai, essai())
+app.append(time, time2, OpenCloseMenu(),/* menuComplet ,*/ /* voitureEssai, */ essai())

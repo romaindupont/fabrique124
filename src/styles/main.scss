@@ -1,6 +1,6 @@
 @font-face {
   font-family: "casablanca";
-  src: url("C:/Users/rddal/OneDrive/Bureau/Dev/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype");
+  src: url("../assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype");
  }
 
 $font-size: 1rem;
@@ -229,7 +229,7 @@ main {
 
 .menu-nav--open {
   position: fixed;
-  padding-top: 3%;
+  padding-top: 2%;
   list-style-type:none;
   margin: 0;
   display: flex;
@@ -266,7 +266,17 @@ main {
   font-size: 0.8rem;
   color: black;
   z-index: 10;
-  animation: apparition 1.5s;
+  &:after {
+    /* display: block; */
+    content: '';
+    border-bottom: 3px solid black;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    &:hover {
+      transform: scaleX(1);
+    }
+  }
+ /*  animation: apparition 1.5s; */
   
   &:nth-child(1) {
     padding-left: 5.7rem;
@@ -307,7 +317,7 @@ main {
   background: url('../assets/Illustrations/image.png');
   width: 10%;
 }
-@keyframes apparition {
+/* @keyframes apparition {
   0% {
     padding-left: 0;
     opacity: 0;
@@ -315,7 +325,7 @@ main {
   100% {
     opacity: 1;
   }
-}
+} */
 .StartPage {
   display: none;
 }
@@ -431,7 +441,7 @@ main {
     }
     & > .section1-img2-title {
       position: relative;
-      font-family: "casablanca";
+      font-family: "casablanca, sans-serif";
       font-size: 3.5rem;
       text-align: center;
       text-shadow: none;
@@ -466,7 +476,7 @@ main {
     }
     & > .section1-img3-title {
       position: relative;
-      font-family: "casablanca";
+      font-family: "casablanca, sans-serif";
       font-size: 3.5rem;
       text-align: center;
       text-shadow: none;
@@ -503,7 +513,7 @@ main {
     }
     & > .section1-img4-title {
       position: relative;
-      font-family: "casablanca";
+      font-family: "casablanca, sans-serif";
       font-size: 3.5rem;
       text-align: center;
       text-shadow: none;
@@ -538,7 +548,7 @@ main {
     }
     & > .section1-img5-title {
       position: relative;
-      font-family: "casablanca";
+      font-family: "casablanca, sans-serif";
       font-size: 3.5rem;
       text-align: center;
       text-shadow: none;
@@ -802,7 +812,7 @@ main {
 
 .section1-img2-title {
   position: absolute;
-  font-family: "casablanca";
+  font-family: "casablanca, sans-serif";
   font-size: 2.5rem;
   text-align: center;
   text-shadow: none;
@@ -811,7 +821,7 @@ main {
 
 .section1-img3-title {
   position: absolute;
-  font-family: "casablanca";
+  font-family: "casablanca, sans-serif";
   font-size: 2.5rem;
   text-align: center;
   text-shadow: none;
@@ -824,7 +834,7 @@ main {
 
 .section1-img4-title {
   position: absolute;
-  font-family: "casablanca";
+  font-family: "casablanca, sans-serif";
   font-size: 2.5rem;
   text-align: center;
   text-shadow: none;
@@ -833,7 +843,7 @@ main {
 
 .section1-img5-title {
   position: absolute;
-  font-family: "casablanca";
+  font-family: "casablanca, sans-serif";
   font-size: 2.5rem;
   text-align: center;
   text-shadow: none;
