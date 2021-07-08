@@ -8,11 +8,11 @@
   "devDependencies": {
     "@babel/preset-env": "^7.14.2",
     "@webpack-cli/generators": "^2.1.0",
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.14.3",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "@babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.5",
