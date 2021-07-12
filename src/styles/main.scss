@@ -110,17 +110,20 @@ main {
 }
 
  .bg2::after {
-  background-image: url('https://drawingdatabase.com/wp-content/uploads/2016/02/fiat-124-spider.gif');
-  filter: opacity(0.2);
+  background-image: url('../assets/PNG/vectoriel_sitew_blueprint2.png');
+  /* filter: opacity(0.5); */
 }
-
+.bg4::after {
+  background-image: url('../assets/PNG/vectoriel_sitew_blueprint3.png');
+  /* filter: opacity(0.5); */
+}
 .bg1::after {
   /* background: #f4d58D; */
-  background-image: url('../assets/Illustrations/vectoriel_sitew_blueprintgreen.png');
+  background-image: url('../assets/PNG/vectoriel_sitew_blueprint1.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 200%;
-  filter: opacity(0.3);
+  /* filter: opacity(0.5); */
  }
 
 .Titre {
@@ -1146,15 +1149,16 @@ input {
   border: 1px solid #37665E;
   outline: none;
   padding: 1rem;
+  z-index: 1;
 }
-form > div {
-  height: 100px;
-  /* border: 1px solid #37665E; */
-  margin: 0.5rem;
+form > input {
+  height: 15px;
+  margin: 2.5rem 0.5rem;
 }
 
 textarea {
   margin-left: 1rem;
+  z-index: 1;
 }
 .contact-image {
   position: absolute;
@@ -1162,6 +1166,21 @@ textarea {
   right: 0px;
   width: 50%;
   transform: skew(-25deg); 
+}
+.enveloppe--haut {
+  border-top: 50px solid #37665E;
+  border-right: 160px solid transparent;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+.enveloppe--bas {
+  border-top: 50px solid #37665E;
+  border-right: 160px solid transparent;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 25px;
+  left: 15px;
 }
 .bg3-cadre {
   width: 45%;
@@ -1188,6 +1207,7 @@ button {
   width: 40%;
   margin: 2rem auto;
   height: 100px;
+  position: relative;
 }
 .footer {
   position: relative;
