@@ -269,12 +269,14 @@ main {
   font-size: 0.8rem;
   color: black;
   z-index: 10;
+  cursor: pointer;
   &::after {
-    /* display: block; */
+    display: block;
+    margin-left: 1rem;
     z-index: 10;
     content: '';
-    width: 10px;
-    border-bottom: 3px solid black;
+    width: 30px;
+    border-bottom: 3px solid #37665E;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     
@@ -317,10 +319,10 @@ main {
     font-size: 1.2rem;
   } */
 }
-a::after:hover {
+.menu-nav--link:hover::after {
   /*       border-bottom: 3px solid black;
         transition: transform 250ms ease-in-out; */
-        transform: scaleX(1);
+  transform: scaleX(2);
       }
 .menu-nav--link-img {
   background: url('../assets/Illustrations/image.png');
@@ -1219,7 +1221,7 @@ button {
 
 .footer-left {
   width: 30%;
-  background: green;
+  background: #37665E;
   height: 20vh;
   transform: skew(-25deg);
 }
