@@ -1,6 +1,7 @@
 @font-face {
   font-family: "casablanca";
-  src: url("C:/Users/rddal/OneDrive/Bureau/Dev/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype");
+ /*  src: url("C:/Users/rddal/OneDrive/Bureau/Dev/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype"); */
+  src: url("/workspace/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype");
  }
 
 $font-size: 1rem;
@@ -34,9 +35,6 @@ body {
  }
 }
 .lafabrique-logo {
-/*   position: absolute;
-  top: -80px;
-  right: 0;*/
   width: 500px; 
   animation: 5s ArriveeFabriqueLogo;
 }
@@ -47,7 +45,6 @@ body {
   }
   to {
     transform: rotate(360deg);
-    /* transform: rotate3d(0,8,1,360deg) scale(1.5); */
   }
 }
 
@@ -257,33 +254,12 @@ main {
   }
   
 }
-
-.menu-nav--link {
-  width: 70%;
-  padding-bottom: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding-right: 3rem;
-  text-align: left;
-  font-size: 0.8rem;
-  color: black;
-  z-index: 10;
-  cursor: pointer;
-  &::after {
-    display: block;
-    margin-left: 1rem;
-    z-index: 10;
-    content: '';
-    width: 30px;
-    border-bottom: 3px solid #37665E;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-    
-  }
-  
- /*  animation: apparition 1.5s; */
-  
+ul {
+  margin: 0;
+}
+li {
+  margin-bottom: -0.5rem;
+  list-style: none;
   &:nth-child(1) {
     padding-left: 5.7rem;
   }
@@ -301,7 +277,51 @@ main {
   }
   &:nth-child(6) {
     padding-left: 1.5rem;
+    padding-right: 1rem;
   }
+}
+.menu-nav--link {
+  width: 70%;
+  padding-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-right: 3rem;
+  text-align: left;
+  font-size: 0.8rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  &::after {
+    display: block;
+    /* margin-left: 1rem; */
+    z-index: 10;
+    content: '';
+    width: 100%;
+    border-bottom: 3px solid #37665E;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    
+  }
+ 
+/*   &:nth-child(1) {
+    padding-left: 5.7rem;
+  }
+  &:nth-child(2) {
+    padding-left: 5rem;
+  }
+  &:nth-child(3) {
+    padding-left: 4rem;
+  }
+  &:nth-child(4) {
+    padding-left: 3.2rem;
+  }
+  &:nth-child(5) {
+    padding-left: 2.5rem;
+  }
+  &:nth-child(6) {
+    padding-left: 1.5rem;
+  } */
   /* @media only screen and (max-width: 690px) {
     width: 100%;
     padding-top: 0.3rem;
@@ -324,10 +344,10 @@ main {
         transition: transform 250ms ease-in-out; */
   transform: scaleX(2);
       }
-.menu-nav--link-img {
+/* .menu-nav--link-img {
   background: url('../assets/Illustrations/image.png');
   width: 10%;
-}
+} */
 /* @keyframes apparition {
   0% {
     padding-left: 0;
@@ -1224,6 +1244,7 @@ button {
   background: #37665E;
   height: 20vh;
   transform: skew(-25deg);
+  
 }
 .footer-right {
   width: 63%;
@@ -1248,4 +1269,19 @@ button {
   transform: rotate(1deg);
   border-top: 17vh solid white;
   border-right: 51px solid transparent;
+}
+.logo-lien {
+  display: flex;
+  flex-flow: wrap-reverse;
+  transform: skewX(25deg);
+  height: 19vh;
+  justify-content: space-evenly;
+  margin: 0px 2rem;
+}
+.rond {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: red;
+  box-shadow: 3px -2px 0px 0px white;
 }
