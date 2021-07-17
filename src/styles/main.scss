@@ -12,6 +12,8 @@ html {
   font-size: $font-size;
   color: $font-color;
   background-color: white;
+  scroll-behavior: smooth;
+  overflow-x:hidden;
 }
 
 body {
@@ -26,38 +28,20 @@ body {
   position: absolute;
   top: 25%;
   left: 50%;
-  
   z-index: 12;
-
- &-imageVolant {
-   width: 60%;
-   animation: 4s ease-in-out 0s infinite rotationLogo ;
- }
 }
-.lafabrique-logo {
-  width: 500px; 
-  animation: 5s ArriveeFabriqueLogo;
+.circle {
+  stroke-dasharray: 720;
+  stroke-dashoffset: 720;
+  animation: dash 8s linear forwards infinite;
 }
 
-@keyframes rotationLogo {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes dash {
   to {
-    transform: rotate(360deg);
+    stroke-dashoffset: 0;
   }
 }
 
-@keyframes ArriveeFabriqueLogo {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 main {
   width: 100vw;
 }
@@ -66,7 +50,7 @@ main {
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 1px;
-  //background-attachment: fixed
+  scroll-behavior: smooth;
 }
 
 .section { 
@@ -108,19 +92,15 @@ main {
 
  .bg2::after {
   background-image: url('../assets/PNG/vectoriel_sitew_blueprint2.png');
-  /* filter: opacity(0.5); */
 }
 .bg4::after {
   background-image: url('../assets/PNG/vectoriel_sitew_blueprint3.png');
-  /* filter: opacity(0.5); */
 }
 .bg1::after {
-  /* background: #f4d58D; */
   background-image: url('../assets/PNG/vectoriel_sitew_blueprint1.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 200%;
-  /* filter: opacity(0.5); */
  }
 
 .Titre {
@@ -229,12 +209,11 @@ main {
 
 .menu-nav--open {
   position: fixed;
-  padding-top: 2%;
+  padding-top: 1%;
   list-style-type:none;
   margin: 0;
   display: flex;
   flex-direction: column;
-  //justify-content: space-between;
   flex-wrap: wrap;
   @media only screen and (max-width: 1100px) {
     padding-right: 10rem;
@@ -304,59 +283,11 @@ li {
     
   }
  
-/*   &:nth-child(1) {
-    padding-left: 5.7rem;
-  }
-  &:nth-child(2) {
-    padding-left: 5rem;
-  }
-  &:nth-child(3) {
-    padding-left: 4rem;
-  }
-  &:nth-child(4) {
-    padding-left: 3.2rem;
-  }
-  &:nth-child(5) {
-    padding-left: 2.5rem;
-  }
-  &:nth-child(6) {
-    padding-left: 1.5rem;
-  } */
-  /* @media only screen and (max-width: 690px) {
-    width: 100%;
-    padding-top: 0.3rem;
-    text-align: left;
-    animation: apparition 4s;
-  }
-  @media only screen and (max-width: 600px) {
-    padding-left: 7rem;
-    font-size: 2rem;
-  }
-  @media only screen and (max-width: 440px) {
-    font-size: 1.6rem;
-  }
-  @media only screen and (max-width: 300px) {
-    font-size: 1.2rem;
-  } */
 }
 .menu-nav--link:hover::after {
-  /*       border-bottom: 3px solid black;
-        transition: transform 250ms ease-in-out; */
   transform: scaleX(2);
       }
-/* .menu-nav--link-img {
-  background: url('../assets/Illustrations/image.png');
-  width: 10%;
-} */
-/* @keyframes apparition {
-  0% {
-    padding-left: 0;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
+
 .StartPage {
   display: none;
 }
@@ -422,27 +353,8 @@ li {
   width: 100vw;
   background: white;
   box-shadow: 2px 2px 10px 2px black;
-  /* background-image: url('../assets/Illustrations/bg1.jpeg'); */
 }
-/* .section1-img1 {
-   background: green;
-  /* background-image: url('../assets/Illustrations/bg1.jpeg'); */
-  /* width: 20%;
-  height: 100vh;
-  transform: skewX(-25deg);
-  transition: width 800ms;
-  position: absolute;
-  left: -115px;
-  background-size: cover;
-  background-position: center;
-  /* &-img {
-    background-image: url('../assets/Illustrations/bg1.jpeg');
-  } */
-  /* &:hover {
-    z-index: 2;
-    width: 500px;
-  }
-} */
+
 .section1-img2 {
   border: 4px solid black;
   background-image: url('../assets/PNG/Paris_vector_small.png');
@@ -604,7 +516,7 @@ li {
 }
 .StartPage-logo {
   width: 15%;
-  margin: auto;
+  margin: 0 auto;
 
 }
 
@@ -614,6 +526,7 @@ li {
  &-logo {
   position: fixed;
   top: 20px;
+  width: 100%;
  }
  &-title {
   font-family: "Anton", sans-serif;
@@ -860,9 +773,6 @@ li {
   text-shadow: none;
   top: 0;
   width: 115px;
-/*   overflow: hidden;
-  text-overflow: fade(16px);
-  white-space: nowrap; */
 }
 
 .section1-img4-title {
@@ -1172,6 +1082,34 @@ input {
   outline: none;
   padding: 1rem;
   z-index: 1;
+  &:hover {
+    animation: borderHover 1s ease-in-out infinite;
+  }
+  &:focus {
+    border: 2px solid #37665E;
+  }
+  @keyframes borderHover {
+  0% {
+  }
+  25% {
+    border-top: 2px solid #37665E;
+  }
+  50% {
+    border-top: 2px solid #37665E;
+    border-right: 2px solid #37665E;
+  }
+  75% {
+    border-top: 2px solid #37665E;
+    border-right: 2px solid #37665E;
+    border-bottom: 2px solid #37665E;
+  }
+  100% {
+    border-top: 2px solid #37665E;
+    border-right: 2px solid #37665E;
+    border-bottom: 2px solid #37665E;
+    border-left: 2px solid #37665E;
+  }
+}
 }
 form > input {
   height: 15px;

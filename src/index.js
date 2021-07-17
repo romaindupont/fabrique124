@@ -1,13 +1,10 @@
-import { forEach, initial } from 'lodash';
 import './styles/main.scss';
-/* import { menuComplet } from './js/menu.js'; */
-/* import { voitureEssai } from './js/voiture'; */
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
-/* import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'; */
+
 
 const heading = document.createElement('h1')
 heading.textContent = 'Romain Dupont Webpack Config'
@@ -21,36 +18,40 @@ const disparition = () => {
   const anime = document.querySelector('.menu');
   anime.style.display = 'none';
   const fenetreDisparition = document.querySelector('.disparition');
-/*   fenetreDisparition.style.transform = "translate(0%, -100%)"; */
   fenetreDisparition.style.display = 'none';
   const titreApparition = document.querySelectorAll('.StartPage');
   titreApparition.forEach(element => element.style.display = "block");
 }
-
-const AddLogo = () => {
-  const premPage = document.querySelector('.disparition');
-  const image = document.createElement('IMG')
-  /* image.setAttribute('src', '../src/assets/Logos/La_fabrique_simple.png'); */
-  image.setAttribute('src', '../src/assets/Illustrations/logo_profil1.png');
-  image.className = "lafabrique-logo";
-  premPage.append(image);
+const numberChange = (number) => {
+  const percent = document.querySelector('.textChange');
+  percent.textContent = number;
 }
-const time2 = setTimeout(AddLogo,3000)
+const AddLogo = () => {
+  const patience = document.querySelector('svg');
+  patience.style.display = 'block';
+  const premPage = document.querySelector('.textChange');
+  premPage.style.display = 'block';
+  const array = [0,25,50,75, 124]
+  let delay = 60
+  for (let i=0; i < 125;i++) {
+    setTimeout(numberChange, delay, i);
+    delay += 60
+}
+}
 const time = setTimeout(disparition,8000);
 
-/* const appearImage = () => {
-  const link = document.querySelector('.menu-nav--link'); 
-  link.addEventListener('mouseover', () => {
-    const modalOpen = document.querySelector('.menu-modal--open');
-    const img = document.createElement('IMG')
-    img.setAttribute('src', '../src/assets/Illustrations/image.png');
-    modalOpen.append(img)
-  })
-  link.addEventListener('mouseout', () => {
-    const modalOpenImg = document.querySelector('.menu-modal--open > img');
-    modalOpenImg.style.display ='none'
-  })
-} */
+const CloseMenuOnClick = () => {
+  const link = document.querySelectorAll('.menu-nav--link'); 
+  link.forEach(lien =>
+    lien.addEventListener('click', (e) => {
+      const menu = document.querySelector('.menuB--open');
+      menu.classList.remove('menuB--open');
+      const modal = document.querySelector('.menu-modal--open');
+      modal.classList.remove('menu-modal--open');
+      const nav = document.querySelector('.menu-nav--open');
+      nav.classList.remove('menu-nav--open');
+  }))
+} 
 const OpenCloseMenu = () => {
   const menuClick = document.querySelector('.menuB');
   menuClick.addEventListener('click', () => {
@@ -63,41 +64,7 @@ const OpenCloseMenu = () => {
     
   })
 }
-/* const essai2 = () => {
-  const container = document.getElementById( 'container' );
-  const renderer = new THREE.WebGLRenderer( );
-  renderer.setPixelRatio( window.devicePixelRatio );
-  renderer.setSize( window.innerWidth, window.innerHeight );
-  container.appendChild( renderer.domElement );
-  // instantiate a loader
-const loader = new OBJLoader();
-
-// load a resource
-loader.load(
-	// resource URL
-	'../src/assets/d/spider.glb',
-	// called when resource is loaded
-	function ( object ) {
-
-		scene.add( object );
-
-	},
-	// called when loading is in progresses
-	function ( xhr ) {
-
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-	},
-	// called when loading has errors
-	function ( error ) {
-
-		console.log( 'An error happened' );
-
-	}
-);
-} */
-
-const essai = () => {
+const car = () => {
 /*   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
   const container = document.getElementById( 'container' );
@@ -260,4 +227,4 @@ function render() {
 }
 }
 
-app.append(time, time2, OpenCloseMenu(),/* menuComplet ,*/ /* voitureEssai, */ essai())
+app.append(time, AddLogo(), OpenCloseMenu(),CloseMenuOnClick() , /* voitureEssai, */ car())
