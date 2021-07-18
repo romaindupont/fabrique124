@@ -65,12 +65,6 @@ const OpenCloseMenu = () => {
   })
 }
 const car = () => {
-/*   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-  const container = document.getElementById( 'container' );
-  const renderer = new THREE.WebGLRenderer();
-  renderer.setSize( window.innerWidth, window.innerHeight );
-  container.appendChild( renderer.domElement ); */
   const wheels = [];
   const container = document.getElementById( 'container' );
   const renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -102,15 +96,19 @@ const car = () => {
   grid.material.transparent = true;
   scene.add( grid );
     const bodyMaterial = new THREE.MeshPhysicalMaterial( {
-      color: 0x14571D, metalness: 0.6, roughness: 0.4, clearcoat: 0.05, clearcoatRoughness: 0.05
+      color: 0x14571D, metalness: 0.6, roughness: 0.4, clearcoat: 0.5, clearcoatRoughness: 0.5
     } );
     const detailsMaterial = new THREE.MeshStandardMaterial( {
-      color: 0xffffff, metalness: 1.0, roughness: 0.5
+      color: 0x201616, metalness: 1.0, roughness: 0.5
     } );
 
     const glassMaterial = new THREE.MeshPhysicalMaterial( {
-      color: 0xffffff, metalness: 0, roughness: 0.1, transmission: 0.9, transparent: true
+      color: 0xffffff, metalness: 0, roughness: 0, transmission: 0.9, transparent: true
     } );
+
+    const seatMaterial = new THREE.MeshPhysicalMaterial( {
+      color: 0xa97843, metalness: 0.01, roughness: 0.4, clearcoat: 0.5, clearcoatRoughness: 0.5
+    } );/* C29565 */
 
     const bodyColorInput = document.getElementById( 'body-color' );
     bodyColorInput.addEventListener( 'input', function () {
@@ -129,7 +127,7 @@ const car = () => {
     const glassColorInput = document.getElementById( 'glass-color' );
     glassColorInput.addEventListener( 'input', function () {
 
-      glassMaterial.color.set( this.value );
+      seatMaterial.color.set( this.value );
 
     } );
 
@@ -149,31 +147,28 @@ const car = () => {
      carModel.getObjectByName( 'Fiat70_Spider_body3' ).material = bodyMaterial;
      carModel.getObjectByName( 'Fiat70_Spider_body4' ).material = bodyMaterial;
      carModel.getObjectByName( 'Fiat70_Spider_body5' ).material = bodyMaterial;
-     carModel.getObjectByName( 'Fiat70_Spider_body6' ).material = bodyMaterial;
+     /* carModel.getObjectByName( 'Fiat70_Spider_body6' ).material = bodyMaterial; */
     
      carModel.getObjectByName( 'Fiat70_Spider_body7' ).material = bodyMaterial;
-      /*carModel.getObjectByName( 'Fiat70_Spider_body8' ).material = bodyMaterial; */
+     carModel.getObjectByName( 'Fiat70_Spider_pettycap' ).material = bodyMaterial;
 
-    /* carModel.getObjectByName( 'tyre' ).material = detailsMaterial; */
+     carModel.getObjectByName( 'Fiat70_Spider_roof' ).material = detailsMaterial;
+    carModel.getObjectByName( 'Fiat70_Spider_seats1' ).material = seatMaterial;
+    carModel.getObjectByName( 'Fiat70_Spider_seats2' ).material = seatMaterial;
+    /*carModel.getObjectByName( 'Fiat70_Spider_tyre4' ).material = detailsMaterial; */
 /*     carModel.getObjectByName( 'rim_fr' ).material = detailsMaterial;
     carModel.getObjectByName( 'rim_rr' ).material = detailsMaterial;
 
     carModel.getObjectByName( 'rim_rl' ).material = detailsMaterial;
     carModel.getObjectByName( 'trim' ).material = detailsMaterial; */
 
-   /*  carModel.getObjectByName( 'glass' ).material = glassMaterial;
-    wheels.push(
-      carModel.getObjectByName( 'tyre' )
-/*       carModel.getObjectByName( 'wheel_fr' ),
-      carModel.getObjectByName( 'wheel_rl' ),
-      carModel.getObjectByName( 'wheel_rr' ) */
-  /*   ); */
-      /* scene.add(gltf.scene);
-      /* gltf.animations;  */
-     /*  gltf.scene;
-      gltf.scenes; 
-      gltf.cameras; 
-      gltf.asset; */
+     carModel.getObjectByName( 'Fiat70_Spider_glass' ).material = glassMaterial;
+/*      wheels.push(
+      carModel.getObjectByName( 'Fiat70_Spider_protector1' ),
+      carModel.getObjectByName( 'Fiat70_Spider_protector2' ),
+      carModel.getObjectByName( 'Fiat70_Spider_protector3' ),
+      carModel.getObjectByName( 'Fiat70_Spider_protector4' )
+     ); */
 
       scene.add( carModel );
   },
@@ -205,25 +200,9 @@ function render() {
 
   }
 
-  grid.position.z = - ( time ) % 5;
+  grid.position.x = - ( time ) % 5;
 
   renderer.render( scene, camera );
- /*  var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-  var cube = new THREE.Mesh( loader );
-  scene.add( cube );
-
-  camera.position.z = 5;
-
-  var animate = function () {
-    requestAnimationFrame( animate );
-
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-
-    renderer.render( scene, camera );
-  };
-
-  animate(); */
 }
 }
 
