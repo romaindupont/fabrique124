@@ -7,7 +7,16 @@
 $font-size: 1rem;
 $font-color: lch(53 105 40);
 $red: red;
+/* @media (min-width: 576px) { ... }
 
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
 html {
   font-size: $font-size;
   color: $font-color;
@@ -90,7 +99,7 @@ main {
   background: #eee;
 }
 
- .bg2::after {
+.bg2::after {
   background-image: url('../assets/PNG/vectoriel_sitew_blueprint2.png');
 }
 .bg4::after {
