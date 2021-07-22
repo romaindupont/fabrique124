@@ -8,7 +8,8 @@ $font-size: 1rem;
 $font-color: lch(53 105 40);
 $red: red;
 /* @media (min-width: 576px) { ... }
-
+font-family: 'Athiti', sans-serif;
+font-family: 'Buda', cursive;
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { ... }
 
@@ -36,9 +37,10 @@ body {
   height: 300px;
   position: absolute;
   top: 25%;
-  left: 50%;
+  left: 45%;
   z-index: 12;
 }
+
 .circle {
   stroke-dasharray: 720;
   stroke-dashoffset: 720;
@@ -132,7 +134,7 @@ main {
   border-left: 0px solid transparent;
   position: absolute;
   top: -170px;
-  left: 32px;
+  left: 33px;
   transform: rotate3d(0,0,15, 90deg);
   transition: all 400ms;
 
@@ -282,19 +284,20 @@ li {
   cursor: pointer;
   &::after {
     display: block;
-    /* margin-left: 1rem; */
+    margin-left: -5rem;
     z-index: 10;
     content: '';
     width: 100%;
     border-bottom: 3px solid #37665E;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
-    
+    transform-origin: left;
   }
  
 }
 .menu-nav--link:hover::after {
   transform: scaleX(2);
+  
       }
 
 .StartPage {
@@ -305,8 +308,8 @@ li {
   display: block;
   margin: auto;
   position: absolute;
-  right: 250px;
-  bottom: 0px;
+  right: 180px;
+  bottom: -80px;
   z-index: 1;
 }
 .StartPage-image-2 {
@@ -361,7 +364,7 @@ li {
   display: flex;
   width: 100vw;
   background: white;
-  box-shadow: 2px 2px 10px 2px black;
+  box-shadow: 2px 0px 4px -2px black;
 }
 
 .section1-img2 {
@@ -621,12 +624,21 @@ li {
   text-transform: uppercase;
   font-size: 4rem;
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 440px;
   z-index: 1;
   text-shadow: 2px -3px 0px white;
 }
-
+.modelTitle {
+  top: 20px;
+  right: 360px;
+}
+.bgTitle {
+  right: 475px;
+}
+.equipeTitle {
+  right: 380px;
+}
 .apropos-paragraph {
   width: 500px;
   font-size: 1.2rem;
@@ -637,7 +649,9 @@ li {
   text-shadow: none;
   font-weight: bold;
   & > p {
-    font-family: 'Anaheim', sans-serif;
+    /* font-family: 'Anaheim', sans-serif; */
+    font-family: 'Athiti', sans-serif;
+    /* font-family: 'Buda', cursive; */
   }
 }
 
@@ -669,11 +683,11 @@ li {
   &--1 {
     margin: 0;
     position: absolute;
-    top: 90px;
+    top: 70px;
     font-size: 4rem;
     right: 70px;
     z-index: 1;
-    animation: textFlottant 2s 0.5s infinite alternate;
+    animation: textFlottant 5s 0.5s infinite alternate;
     @keyframes textFlottant {
       0% {
         transform: translate3d(-2px, 2px, 0px);
@@ -701,7 +715,7 @@ li {
     top: 145px;
     right: 175px;
     z-index: 0;
-    animation: textFlottant2 2s 0.5s infinite alternate;
+    animation: textFlottant2 5s 0.5s infinite alternate;
     @keyframes textFlottant2 {
       0% {
         transform: translate3d(-10px, 2px, 0px);
@@ -732,9 +746,9 @@ li {
     -webkit-text-stroke: 0.2px white;
     z-index: 1;
     position: absolute;
-    top: 200px;
+    top: 220px;
     right: 105px;
-    animation: textFlottant3 2s 0.5s infinite alternate;
+    animation: textFlottant3 5s 0.5s infinite alternate;
     @keyframes textFlottant3 {
       0% {
         transform: translate3d(-2px, 2px, 0px);
@@ -772,6 +786,7 @@ li {
   text-shadow: none;
   top: 0;
   left: 20px;
+  transform: skew(25deg);
 }
 
 .section1-img3-title {
@@ -782,6 +797,7 @@ li {
   text-shadow: none;
   top: 0;
   width: 115px;
+  transform: skew(25deg);
 }
 
 .section1-img4-title {
@@ -792,6 +808,7 @@ li {
   text-shadow: none;
   top: 0;
   left: 20px;
+  transform: skew(25deg);
 }
 
 .section1-img5-title {
@@ -802,6 +819,7 @@ li {
   text-shadow: none;
   top: 0;
   left: 20px;
+  transform: skew(25deg);
 }
 
 .triangleModele1 {
@@ -830,7 +848,7 @@ li {
   width: 35%;
   position: absolute;
   top: 90px;
-  transform: skew(23deg);
+  transform: skew(17deg);
   left: 30px;
 }
 .bg2-p {
@@ -849,7 +867,7 @@ li {
   top: 50px;
   left: 130px;
   z-index: -1;
-  transform: skew(5deg);
+  transform: skew(0deg);
 }
 .bg3 {
   flex-direction: column;
@@ -1038,7 +1056,7 @@ li {
   width: 500px;
   height: 400px;
   position: absolute;
-  top: 180px;
+  top: 225px;
   right: 150px;
 }
 
@@ -1122,7 +1140,7 @@ input {
 }
 form > input {
   height: 15px;
-  margin: 2.5rem 0.5rem;
+  margin: 1.5rem 0.5rem;
 }
 
 textarea {
@@ -1140,7 +1158,7 @@ textarea {
   border-top: 40px solid #37665E;
   border-right: 15px solid transparent;
   position: absolute;
-  top: 3px;
+  top: -3px;
   transform: rotate(-90deg);
   left: 35px;
   transition: all 1s ease-in-out;
@@ -1148,9 +1166,9 @@ textarea {
 .enveloppe--bas {
   border-top: 40px solid #37665E;
   border-right: 15px solid transparent;
-  transform: rotate(90deg);
+  transform: scaleX(-1) rotate(90deg);
   position: absolute;
-  top: 0px;
+  top: 13px;
   left: 35px;
   transition: all 1s ease-in-out;
 }

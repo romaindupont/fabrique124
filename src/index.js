@@ -81,6 +81,7 @@ const car = () => {
   camera.position.set( -3.25, 8.4, 5.5 );
   const controls = new OrbitControls( camera, container );
   controls.target.set( 0, 0.5, 0 );
+  /* camera.position.set( 100, 60, 50 ); */
   controls.update();
 
   const pmremGenerator = new THREE.PMREMGenerator( renderer );
