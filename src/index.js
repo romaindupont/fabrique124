@@ -77,10 +77,15 @@ const car = () => {
   container.appendChild( renderer.domElement );
 
   /* window.addEventListener( 'resize', onWindowResize ); */
-  const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 );
-  camera.position.set( -3.25, 8.4, 5.5 );
+  const camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  /* camera.position.set( -3.25, 8.4, 5.5 ); */
+  
+  camera.position.set( -15, 5, 10 );/* camera.zoom=6.8 */
+ /*  camera.maxDistance.set(1) */
   const controls = new OrbitControls( camera, container );
   controls.target.set( 0, 0.5, 0 );
+  controls.minDistance = 0.8;
+  controls.minZoom = 0.5;
   /* camera.position.set( 100, 60, 50 ); */
   controls.update();
 
@@ -90,7 +95,26 @@ const car = () => {
   scene.background = new THREE.Color( 0xeeeeee );
   scene.environment = pmremGenerator.fromScene( new RoomEnvironment() ).texture;
   /* scene.fog = new THREE.Fog( 0xeeeeee, 10, 100 );  */
+  /* scene.add(new THREE.AmbientLight( 0x666666 )) */
+ /*  const light = new THREE.DirectionalLight( 0xdfebff, 1 );
+				light.position.set( 50, 200, 100 );
+				light.position.multiplyScalar( 1.3 );
 
+				light.castShadow = true;
+
+				light.shadow.mapSize.width = 1024;
+				light.shadow.mapSize.height = 1024;
+
+				const d = 300;
+
+				light.shadow.camera.left = - d;
+				light.shadow.camera.right = d;
+				light.shadow.camera.top = d;
+				light.shadow.camera.bottom = - d;
+
+				light.shadow.camera.far = 1000;
+
+				scene.add( light ); */
   const grid = new THREE.GridHelper( 10, 0, 0xeeeeee, 0xeeeeee );
   grid.material.opacity = 0.1;
   grid.material.depthWrite = true;
