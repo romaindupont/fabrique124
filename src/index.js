@@ -21,6 +21,8 @@ const disparition = () => {
   fenetreDisparition.style.display = 'none';
   const titreApparition = document.querySelectorAll('.StartPage');
   titreApparition.forEach(element => element.style.display = "block");
+  const scrollToTop = document.querySelector('.scrollToTop');
+  scrollToTop.style.display = 'inline-flex';
 }
 const numberChange = (number) => {
   const percent = document.querySelector('.textChange');
