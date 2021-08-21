@@ -365,6 +365,7 @@ li {
   @media (min-width: 1200px) {
     right: 180px;
     bottom: -80px;
+    width: 50%;
   }
   @media (min-width: 1800px) {
     right: 300px;
@@ -888,9 +889,9 @@ li {
       top: 180px;
     }
     @media (min-width: 768px) {
-      font-size: 3rem;
+      font-size: 2.5rem;
       left: 70px;
-      top: 190px;
+      top: 350px;
     }
     @media (min-width: 992px) {
       font-size: 3.6rem;
@@ -948,7 +949,7 @@ li {
     border-bottom: 295px solid #fff;
    border-left: 125px solid transparent;
     transform: rotate(-177deg);
-    top: 75px;
+    top: 200px;
     left: -2px;
   }
   @media (min-width: 992px) {
@@ -959,7 +960,7 @@ li {
   @media (min-width: 1200px) {
     border-bottom: 295px solid #fff;
     border-left: 125px solid transparent;
-
+    top: 0;
   }  
 }
 .triangle2 {
@@ -1124,8 +1125,8 @@ li {
   text-shadow: 2px -3px 0px white;
   @media (min-width: 375px) {
     font-size: 2rem;
-    top: 20px;
-    right: 135px;
+    top: 26px;
+    right: 95px;
   }
   @media (min-width: 425px) {
     font-size: 3rem;
@@ -1135,7 +1136,7 @@ li {
   @media (min-width: 768px) {
     font-size: 4rem;
     top: 20px;
-    right: 440px;
+    right: 350px;
   }
   @media (min-width: 992px) {
     font-size: 4rem;
@@ -1144,7 +1145,7 @@ li {
   }
   @media (min-width: 1200px) {
     top: 20px;
-    right: 440px;
+    right: 445px;
   }
   @media (min-width: 1800px) {
     font-size: 6rem;
@@ -1161,7 +1162,7 @@ li {
   @media (min-width: 768px) {
     font-size: 3rem;
     top: 45px;
-    right: 275px;
+    right: 125px;
   }
   @media (min-width: 992px) {
     font-size: 4rem;
@@ -1183,19 +1184,19 @@ li {
   top: 20px;
   right: 360px;
   @media (min-width: 375px) {
-    top: 20px;
-    right: 100px;
+    top: 25px;
+    right: 30px;
   }
   @media (min-width: 425px) {
     top: 35px;
     right: 60px;
   }
   @media (min-width: 768px) {
-    top: 18px;
-    right: 355px;
+    top: 25px;
+    right: 210px;
   }
   @media (min-width: 1200px) {
-    top: 20px;
+    top: 25px;
     right: 360px; 
   }
   @media (min-width: 1800px) {
@@ -1212,7 +1213,7 @@ li {
     right: 170px;
   }
   @media (min-width: 768px) {
-    right: 500px;
+    right: 465px;
   }
   @media (min-width: 1200px) {
     right: 475px;
@@ -1234,7 +1235,7 @@ li {
     right: 350px;
   }
   @media (min-width: 1200px) {
-    right: 380px;
+    right: 250px;
   }
 }
 .equipe-p {
@@ -1271,9 +1272,16 @@ li {
   }
   @media (min-width: 768px) {
     width: 500px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     top: 190px;
-    left: 150px;
+    left: 35px;
+    transform: skew(-25deg);
+  }
+  @media (min-width: 1200px) {
+    width: 500px;
+    font-size: 1.4rem;
+    top: 190px;
+    left: 90px;
     transform: skew(-25deg);
   }
   @media (min-width: 1800px) {
@@ -1339,7 +1347,7 @@ li {
       }
     }
     @media (min-width: 375px) {
-      top: 465px;
+      top: 360px;
       font-size: 2rem;
       right: 10px;
     }
@@ -1349,9 +1357,9 @@ li {
       right: 70px;
     }
     @media (min-width: 768px) {
-      top: -25px;
-      font-size: 2rem;
-      right: -25px;
+      top: 550px;
+      font-size: 3rem;
+      right: 50px;
     }
     @media (min-width: 992px) {
       top: 510px;
@@ -1403,7 +1411,7 @@ li {
     }
     @media (min-width: 375px) {
       font-size: 1.5rem;
-      top: 500px;
+      top: 400px;
       right: 70px;
     }
     @media (min-width: 425px) {
@@ -1412,9 +1420,9 @@ li {
       right: 111px;
     }
     @media (min-width: 768px) {
-      font-size: 2rem;
-      top: 222px;
-      right: -80px;
+      font-size: 2.5rem;
+      top: 615px;
+      right: 130px;
     }
     @media (min-width: 992px) {
       font-size: 3.5rem;
@@ -1461,7 +1469,7 @@ li {
     }
     @media (min-width: 375px) {
       font-size: 1.5rem;
-      top: 530px;
+      top: 430px;
       right: -35px;
     }
     @media (min-width: 425px) {
@@ -1470,9 +1478,9 @@ li {
       right: 42px;
     }
     @media (min-width: 768px) {
-      font-size: 2rem;
-      top: 390px;
-      right: -75px;
+      font-size: 2.5rem;
+      top: 670px;
+      right: 20px;
     }
     @media (min-width: 992px) {
       font-size: 3.5rem;
@@ -1695,9 +1703,9 @@ li {
   }
   @media (min-width: 768px) {
     width: 40%;
-    top: 600px;
+    top: 685px;
     transform: skew(17deg);
-    left: 365px;
+    left: 560px;
   }
   @media (min-width: 992px) {
     width: 50%;
@@ -1718,6 +1726,7 @@ li {
   left: 525px;
   transform: skew(0deg);
   background: white;
+  font-size: 1rem;
   @media (min-width: 375px) {
     top: -35px;
     left: -15px;
@@ -1738,6 +1747,7 @@ li {
   }
   @media (min-width: 1200px) {
     left: 525px;
+    font-size: 1.2rem;
   }
   @media (min-width: 1800px) {
     left: 900px;
@@ -1790,22 +1800,22 @@ li {
   @media (min-width: 768px) {
     width: 35%;
     height: 25%;
-    top: 572px;
-    left: 448px;
-}
-@media (min-width: 992px) {
-  height: 25%;
-  top: 602px;
-  left: 290px;
-}
-@media (min-width: 1200px) {
-  height: 65%;
-  top: 50px;
-  left: 70px;
-}
+    top: 635px;
+    left: 565px;
+  }
+  @media (min-width: 992px) {
+    height: 25%;
+    top: 602px;
+    left: 290px;
+  }
+  @media (min-width: 1200px) {
+    height: 65%;
+    top: 50px;
+    left: 70px;
+  }
 }
 .bg3 {
-  flex-direction: column;
+    flex-direction: column;
 }
 #info {
   position: absolute;
@@ -1815,7 +1825,7 @@ li {
   flex-direction: column;  
   z-index: 1;
   @media (min-width: 375px) {
-    top: 650px;
+    top: 560px;
     left: 20px;
     flex-direction: row;
   }
@@ -2200,6 +2210,9 @@ textarea {
     margin-left: 0.5rem;
     width: 85%;
   }
+  @media (min-width: 768px) {
+    margin-left: 5.5rem;
+  }
   @media (min-width: 1200px) {
     margin-left: 1rem;
   }
@@ -2231,7 +2244,7 @@ textarea {
   @media (min-width: 375px) {
     font-size: 1.5rem; 
     top: 35px;
-    right: 170px;
+    right: 135px;
   }
   @media (min-width: 425px) {
     font-size: 3rem;
@@ -2240,8 +2253,8 @@ textarea {
   }
   @media (min-width: 768px) {
     font-size: 4rem;
-    top: 20px;
-    right: 460px;
+    top: 25px;
+    right: 365px;
   }
   @media (min-width: 992px) {
     top: 20px;
@@ -2325,7 +2338,7 @@ textarea {
     @media (min-width: 375px) {
       top: -80px;
       width: 100%; 
-      left: -80px;
+      left: -130px;
     }
     @media (min-width: 768px) {
       top: 0;
@@ -2557,7 +2570,7 @@ textarea {
   justify-content: space-evenly;
   margin: 0px 2rem;
   @media (min-width: 375px) {
-    height: 19vh;
+    height: 20vh;
   }
   @media (min-width: 425px) {
     height: 19vh;
@@ -2640,8 +2653,18 @@ textarea {
   justify-content: center;
   padding-top: 2rem;
   transform: rotate(3deg);
+  cursor: pointer;
+  &:hover {
+    background-color: #37665E;
+
+    &>.scrollToTop-link--1  {
+      background-color: #EEEEEE;
+     }
+     &>.scrollToTop-link--2  {
+      background-color: #EEEEEE;
+     }
+  }
   &-link--1 {
-    // text-align: center;
      display: block;
      width:41px;
      height:5px;
@@ -2650,7 +2673,6 @@ textarea {
      transition:0.4s;
    }
      &-link--2 {
-    // text-align: center;
      display: block;
      width:41px;
      height:5px;
@@ -2658,4 +2680,8 @@ textarea {
      transform: rotate(39deg) translate(-13px, -11px);
      transition:0.4s;
    }
+  }
+
+  #details-color {
+    width: 10%;
   }
