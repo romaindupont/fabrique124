@@ -66,6 +66,14 @@ const OpenCloseMenu = () => {
     
   })
 }
+const sendMail = () => {
+  const sending = document.querySelector('.form');
+  sending.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log(e)
+  })
+}
+
 const car = () => {
   const wheels = [];
   const container = document.getElementById( 'container' );
@@ -250,4 +258,4 @@ function render() {
 }
 }
 
-app.append(time, AddLogo(), OpenCloseMenu(),CloseMenuOnClick() , /* voitureEssai, */ car())
+app.append(time, AddLogo(), OpenCloseMenu(),CloseMenuOnClick() ,sendMail(), car())
