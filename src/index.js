@@ -70,7 +70,7 @@ const sendMail = () => {
   const sending = document.querySelector('.form');
   sending.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(e)
+    console.log(e.target.nom.value)/* prenom email telephone text */
   })
 }
 
@@ -176,12 +176,21 @@ const car = () => {
     } );
 
     const glassColorInput = document.getElementById( 'glass-color' );
-    glassColorInput.addEventListener( 'input', function () {
+    glassColorInput.addEventListener( 'click', function () {
 
-      seatMaterial.color.set( this.value );
+      bodyMaterial.color.set('#021250' );
+      detailsMaterial.color.set( '#4C4C53' );
+      seatMaterial.color.set( '#C2531E' );
 
     } );
+    const milanColorInput = document.getElementById( 'milanCar' );
+    milanColorInput.addEventListener( 'click', function () {
 
+      bodyMaterial.color.set('#fff' );
+      detailsMaterial.color.set( '#4C4C53' );
+      seatMaterial.color.set( '#C2531E' );
+
+    } );
   const loader = new GLTFLoader();
   const dracoLoader = new DRACOLoader();
   /* dracoLoader.setDecoderPath( 'src/three/examples/js/libs/draco/' ); */

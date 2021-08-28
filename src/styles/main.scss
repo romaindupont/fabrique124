@@ -1840,7 +1840,7 @@ li {
     flex-direction: row;
   }
   @media (min-width: 992px) {
-    top: 200px;
+    top: 45px;
     left: 90px;
     flex-direction: column;  
   }
@@ -2682,6 +2682,22 @@ textarea {
    }
   }
 
-  #details-color {
-    width: 10%;
+#details-color {
+  width: 45%;
+  margin: 30px auto;
+  }
+
+#glass-color, #milanCar {
+  width: 45%;
+  margin: 30px auto;
+}
+.colorPicker {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+  .colorPicker-name {
+    font-family: "casablanca";
+    font-size: 1.5rem;
+    text-align: center;
   }
