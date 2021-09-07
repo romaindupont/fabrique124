@@ -81,7 +81,8 @@ const car = () => {
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setSize( window.innerWidth, window.innerHeight );
   renderer.setAnimationLoop( render );
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.outputEncoding = THREE.RGBDEncoding;
+  /* sRGBEncoding */
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 0.85;
   container.appendChild( renderer.domElement );
@@ -96,7 +97,7 @@ const car = () => {
   controls.target.set( 0, 0.5, 0 );
   controls.minDistance = 0.8;
   controls.minZoom = 0.5;
-  /* camera.position.set( 100, 60, 50 ); */
+  /* camera.position.set( -15, 5, 10 ); */
   controls.update();
 
   const pmremGenerator = new THREE.PMREMGenerator( renderer );
@@ -255,11 +256,11 @@ function render() {
 
   const time = - performance.now() / 1000;
 
-  for ( let i = 0; i < wheels.length; i ++ ) {
+ /*  for ( let i = 0; i < wheels.length; i ++ ) {
 
     wheels[ i ].rotation.x = time * Math.PI;
 
-  }
+  } */
 
   grid.position.x = - ( time ) % 5;
 

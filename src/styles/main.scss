@@ -1,7 +1,7 @@
 @font-face {
   font-family: "casablanca";
-  src: url("C:/Users/rddal/OneDrive/Bureau/Dev/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype");
-  /* src: url("/workspace/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype") ;*/
+  /* src: url("C:/Users/rddal/OneDrive/Bureau/Dev/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype"); */
+  src: url("/workspace/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype") ;
  }
 
 $font-size: 1rem;
@@ -1824,6 +1824,8 @@ li {
   display: flex;
   flex-direction: column;  
   z-index: 1;
+  width: 100px;
+  
   @media (min-width: 375px) {
     top: 560px;
     left: 20px;
@@ -1843,6 +1845,7 @@ li {
     top: 45px;
     left: 90px;
     flex-direction: column;  
+    width: 100px;
   }
 }
 #container {
