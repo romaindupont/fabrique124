@@ -473,7 +473,7 @@ li {
       height: 60%;
     }
     @media (min-width: 1200px) {
-      height: 100%;
+      height: 45%;
     }
   }
   &:hover {
@@ -487,7 +487,7 @@ li {
       width: 1500px;
     }
     & > .section1-img2-img {
-      background-image: url('../assets/Illustrations/IMG_8302-removebg-preview1.png');
+      background-image: url('../assets/Illustrations/spiderBleu.png');
       width: 80%;
       position: absolute;
       top: 105px;
@@ -513,7 +513,7 @@ li {
         left: 30px;
       }
       @media (min-width: 1200px) {
-        top: 105px;
+        top: 305px;
         left: 30px;
         width: 80%;
       }
@@ -557,7 +557,7 @@ li {
       height: 60%;
     }
     @media (min-width: 1200px) {
-      height: 100%;
+      height: 45%;
     }
   }
   &:hover {
@@ -583,7 +583,7 @@ li {
       width: 1500px;
     }
     & > .section1-img3-img {
-      background-image: url('../assets/Illustrations/IMG_8302-removebg-preview1.png');
+      background-image: url('../assets/Illustrations/spiderverte.png');
       width: 65%;
       position: absolute;
       top: 105px;
@@ -609,8 +609,8 @@ li {
         left: 100px;
       }
       @media (min-width: 1200px) {
-        width: 90%;
-        top: 110px;
+        width: 80%;
+        top: 325px;
         left: 70px;
       }
     }
@@ -899,9 +899,9 @@ li {
       top: 265px;
     }
     @media (min-width: 1200px) {
-      left: 125px;
+      left: 65px;
       top: 215px;
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
     @media (min-width: 1800px) {
       font-size: 8rem;
@@ -1818,6 +1818,7 @@ li {
     flex-direction: column;
 }
 #info {
+  width: 200px;
   position: absolute;
   top: 200px;
   left: 90px;
