@@ -8,6 +8,18 @@ $font-size: 1rem;
 $font-color: lch(53 105 40);
 $red: red;
 $staticBgColor: #eee;
+$menuStormColor: #fff;
+$couleurPrincipal: #37665e;
+$menuBgOpen:#fff;
+$textMenuColor: #000;
+$bgGeneral: #fff;
+$accordeonBorderColor: #000;
+$firstPageBg: #eee;
+$footerBg: #fff;
+$socialRoundFooterBg: #000;
+$acceptCookieColor: #00332b;
+$refuseCookieColor: #86151c;
+$inputBg: #eee;
 
 html {
   font-size: $font-size;
@@ -96,7 +108,7 @@ main {
   z-index: -1;
 }
 .static {
-  background: #eee;
+  background: $staticBgColor;
 }
 .bg2::after {
   background-image: url('../assets/PNG/vectoriel_sitew_blueprint2.png');
@@ -124,7 +136,7 @@ main {
   display: inline-block;
   height: 4px;
   width: 6px;
-  border-bottom: 30px solid #fff;
+  border-bottom: 30px solid $menuStormColor;
   border-left: 0px solid transparent;
   position: absolute;
   top: -170px;
@@ -134,7 +146,7 @@ main {
   @media (min-width: 1200px) {
     height: 4px;
     width: 6px;
-    border-bottom: 30px solid #fff;
+    border-bottom: 30px solid $menuStormColor;
     border-left: 0px solid transparent;
     top: -170px;
     left: 33px;
@@ -145,7 +157,7 @@ main {
   display: inline-block;
   height: 4px;
   width: 6px;
-  border-bottom: 30px solid #fff;
+  border-bottom: 30px solid $menuStormColor;
   border-left: 0px solid transparent;
   transform: rotate3d(0, 0, 15, 270deg);
   position: absolute;
@@ -155,7 +167,7 @@ main {
   @media (min-width: 1200px) {
     height: 4px;
     width: 6px;
-    border-bottom: 30px solid #fff;
+    border-bottom: 30px solid $menuStormColor;
     border-left: 0px solid transparent;
     top: -150px;
     left: 28px;
@@ -167,7 +179,7 @@ main {
   display: inline-block;
   height: 0;
   width: 0;
-  border-top: 200px solid #37665E;
+  border-top: 200px solid $couleurPrincipal;
   border-right: 100px solid transparent;
   top: 0;
   left: 0;
@@ -205,13 +217,13 @@ main {
   display : inline-block;
   height : 0;
   width : 0;
-  border-top : 215px solid white;
+  border-top : 215px solid $menuBgOpen;
   border-right : 105px solid transparent;
   @media (min-width: 425px) {
-    border-top: 215px solid white;
+    border-top: 215px solid $menuBgOpen;
   }
   @media (min-width: 768px) {
-    border-top : 210px solid white;
+    border-top : 210px solid $menuBgOpen;
     border-right : 105px solid transparent;
   }
 }
@@ -220,7 +232,7 @@ main {
   width: 20vw;
   height: 100vh;
   border-radius: 0;
-  border-top : 210px solid white;
+  border-top : 210px solid $menuBgOpen;
   @media (min-width: 375px) {
     width: 70vw;
   }
@@ -303,7 +315,7 @@ li {
   padding-right: 3rem;
   text-align: left;
   font-size: 0.8rem;
-  color: black;
+  color: $textMenuColor;
   z-index: 10;
   cursor: pointer;
   &::after {
@@ -312,7 +324,7 @@ li {
     z-index: 10;
     content: '';
     width: 100%;
-    border-bottom: 3px solid #37665E;
+    border-bottom: 3px solid $couleurPrincipal;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     transform-origin: left;
@@ -397,18 +409,18 @@ li {
   }
 }
 .premierePage {
-  background: #fff;
+  background: $bgGeneral;
 }
 
 .section1 {
   display: flex;
   width: 100vw;
-  background: white;
+  background: $menuBgOpen;
   box-shadow: 2px 0px 4px -2px black;
 }
 
 .section1-img2 {
-  border: 4px solid black;
+  border: 4px solid $accordeonBorderColor;
   background-image: url('../assets/PNG/Paris_vector_small.png');
   background-size: cover;
   background-position: center;
@@ -423,10 +435,13 @@ li {
     background-size: cover;
     background-position: center;
     @media (min-width: 375px) {
-      height: 50%;
+      height: 40%;
     }
     @media (min-width: 425px) {
-      height: 60%;
+      height: 40%;
+    }
+    @media (min-width: 992px) {
+      height: 40%;
     }
     @media (min-width: 1200px) {
       height: 80%;
@@ -449,7 +464,7 @@ li {
       top: 105px;
       left: 30px;
       @media (min-width: 375px) {
-        width: 150%;
+        width: 165%;
         top: 330px;
         left: 30px;
       }
@@ -497,7 +512,7 @@ li {
   }
 }
 .section1-img3 {
-  border: 4px solid black;
+  border: 4px solid $accordeonBorderColor;
   background-image: url('../assets/PNG/dublin.png');
   background-size: cover;
   background-position: center;
@@ -511,7 +526,10 @@ li {
     background-size: cover;
     background-position: center;
     @media (min-width: 375px) {
-      height: 60%;
+      height: 26%;
+    }
+    @media (min-width: 992px) {
+      height: 22%;
     }
     @media (min-width: 1200px) {
       height: 45%;
@@ -546,8 +564,8 @@ li {
       top: 105px;
       left: 100px;
       @media (min-width: 375px) {
-        width: 140%;
-        top: 266px;
+        width: 160%;
+        top: 260px;
         left: 0px;
       }
       @media (min-width: 425px) {
@@ -556,18 +574,18 @@ li {
         left: 60px;
       }
       @media (min-width: 768px) {
-        width: 85%;
-        top: 260px;
+        width: 80%;
+        top: 415px;
         left: 100px;
       }
       @media (min-width: 992px) {
-        width: 100%;
+        width: 80%;
         top: 430px;
         left: 100px;
       }
       @media (min-width: 1200px) {
         width: 80%;
-        top: 325px;
+        top: 275px;
         left: 70px;
       }
     }
@@ -602,7 +620,7 @@ li {
   }
 }
 .section1-img4 {
-  border: 4px solid black;
+  border: 4px solid $accordeonBorderColor;
   background-image: url('../assets/PNG/milan_vector_light.png');
   background-size: cover;
   background-position: center;
@@ -617,10 +635,13 @@ li {
     background-size: cover;
     background-position: center;
     @media (min-width: 375px) {
-      height: 60%;
+      height: 40%;
     }
     @media (min-width: 425px) {
-      height: 50%;
+      height: 35%;
+    }
+    @media (min-width: 992px) {
+      height: 30%;
     }
     @media (min-width: 1200px) {
       height: 80%;
@@ -643,7 +664,7 @@ li {
       top: 105px;
       left: 75px;
       @media (min-width: 375px) {
-        width: 175%;
+        width: 180%;
         top: 280px;
         left: 10px;
       }
@@ -694,7 +715,7 @@ li {
   }
 }
 .section1-img5 {
-  border: 4px solid black;
+  border: 4px solid $accordeonBorderColor;
   background-image: url('../assets/PNG/Oslo.png');
   background-size: cover;
   background-position: center;
@@ -708,10 +729,13 @@ li {
     background-size: cover;
     background-position: center;
     @media (min-width: 375px) {
-      height: 60%;
+      height: 27%;
     }
     @media (min-width: 425px) {
-      height: 50%;
+      height: 25%;
+    }
+    @media (min-width: 425px) {
+      height: 22%;
     }
     @media (min-width: 1200px) {
       height: 50%;
@@ -738,7 +762,7 @@ li {
       top: 105px;
       left: 75px;
       @media (min-width: 375px) {
-        width: 175%;
+        width: 180%;
         top: 272px;
         left: 10px;
       }
@@ -758,7 +782,7 @@ li {
         left: 75px;
       }
       @media (min-width: 1200px) {
-        top: 285px;
+        top: 260px;
         left: 75px;
         width: 100%;
       }
@@ -868,7 +892,7 @@ li {
     }
   }
   &-fond {
-    background: #EEEEEE;
+    background: $firstPageBg;
     height: 500px;
     width: 100vw;
     margin-top: 8rem;
@@ -891,59 +915,59 @@ li {
 }
 .triangle1 {
   display: inline-block;
-  border-bottom: 295px solid #fff;
+  border-bottom: 295px solid $bgGeneral;
   border-left: 125px solid transparent;
   position: absolute;
   transform: rotate(-175deg);
   top: 75px;
   left: -2px;
   @media (min-width: 375px) {
-    border-bottom: 175px solid #fff;
+    border-bottom: 175px solid $bgGeneral;
     border-left: 70px solid transparent;
     transform: rotate(-175deg);
     top: 110px;
     left: -2px;
   }
   @media (min-width: 768px) {
-    border-bottom: 295px solid #fff;
+    border-bottom: 295px solid $bgGeneral;
    border-left: 125px solid transparent;
     transform: rotate(-177deg);
     top: 200px;
     left: -2px;
   }
   @media (min-width: 992px) {
-    border-bottom: 295px solid #fff;
+    border-bottom: 295px solid $bgGeneral;
     border-left: 125px solid transparent;
     transform: rotate(-175deg);
   }
   @media (min-width: 1200px) {
-    border-bottom: 295px solid #fff;
+    border-bottom: 295px solid $bgGeneral;
     border-left: 125px solid transparent;
     top: 0;
   }  
 }
 .triangle2 {
   display: inline-block;
-  border-bottom: 295px solid #fff;
+  border-bottom: 295px solid $bgGeneral;
   border-left: 125px solid transparent;
   position: absolute;
   transform: rotate(0deg);
   bottom: -5px;
   right: -2px;
   @media (min-width: 375px) {
-    border-bottom: 150px solid #fff;
+    border-bottom: 150px solid $bgGeneral;
     border-left: 75px solid transparent;
     bottom: 0px;
     right: 0px;
   }
   @media (min-width: 425px) {
-    border-bottom: 200px solid #fff;
+    border-bottom: 200px solid $bgGeneral;
     border-left: 90px solid transparent;
     bottom: -5px;
     right: -2px;
   }
   @media (min-width: 1200px) {
-    border-bottom: 295px solid #fff;
+    border-bottom: 295px solid $bgGeneral;
     border-left: 125px solid transparent;
     bottom: -5px;
     right: -2px;
@@ -951,26 +975,26 @@ li {
 }
 .triangle3 {
   display: inline-block;
-  border-bottom: 295px solid #fff;
+  border-bottom: 295px solid $bgGeneral;
   border-left: 125px solid transparent;
   position: absolute;
   transform: rotate(-177deg);
   top: -5px;
   left: -5px;
   @media (min-width: 375px) {
-    border-bottom: 150px solid #fff;
+    border-bottom: 150px solid $bgGeneral;
     border-left: 75px solid transparent;
     top: -5px;
     left: -5px;
   }
   @media (min-width: 425px) {
-    border-bottom: 200px solid #fff;
+    border-bottom: 200px solid $bgGeneral;
     border-left: 90px solid transparent;
     top: -5px;
     left: -5px;
   }
   @media (min-width: 1200px) {
-    border-bottom: 295px solid #fff;
+    border-bottom: 295px solid $bgGeneral;
     border-left: 125px solid transparent;
     top: -5px;
     left: -5px;
@@ -983,8 +1007,8 @@ li {
   top: 20px;
   width: 80px;
   height: 80px;
-  background: #37665E;
-  background: repeating-linear-gradient(45deg, transparent, transparent 4px, #37665E 7px);
+  background: $couleurPrincipal;
+  background: repeating-linear-gradient(45deg, transparent, transparent 4px, $couleurPrincipal 7px);
   transform: skew(-25deg);
   z-index: 1;
   @media (min-width: 375px) {
@@ -1016,7 +1040,7 @@ li {
   top: 50px;
   width: 300px;
   height: 80px;
-  background: #37665E;
+  background: $couleurPrincipal;
   transform: skew(-25deg);
   z-index: 1;
   @media (min-width: 375px) {
@@ -1048,7 +1072,7 @@ li {
   width: 300px;
   height: 80px;
   background: transparent;
-  border: 2px solid #37665E;
+  border: 2px solid $couleurPrincipal;
   z-index: 1;
   transform: skew(-25deg);
   @media (min-width: 375px) {
@@ -1238,7 +1262,7 @@ li {
   }
   @media (min-width: 1200px) {
     width: 500px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     top: 190px;
     left: 90px;
     transform: skew(-25deg);
@@ -1398,7 +1422,7 @@ li {
   }
   &--3 {
     margin: 0;
-    color: #37665E;
+    color: $couleurPrincipal;
     font-size: 3.5rem;
     -webkit-text-stroke: 0.2px white;
     z-index: 1;
@@ -1549,24 +1573,24 @@ li {
   position: absolute;
   top: 175px;
   left: 280px;
-  border-top: 200px solid #37665E;
+  border-top: 200px solid $couleurPrincipal;
   border-right: 100px solid transparent;
   @media (min-width: 375px) {
     top: 200px;
     left: 10px;
-    border-top: 100px solid #37665E;
+    border-top: 100px solid $couleurPrincipal;
     border-right: 60px solid transparent;
   }
   @media (min-width: 425px) {
     top: 160px;
     left: 35px;
-    border-top: 150px solid #37665E;
+    border-top: 150px solid $couleurPrincipal;
     border-right: 75px solid transparent;
   }
   @media (min-width: 768px) {
     top: 250px;
     left: 95px;
-    border-top: 200px solid #37665E;
+    border-top: 200px solid $couleurPrincipal;
     border-right: 100px solid transparent;
   }
   @media (min-width: 992px) {
@@ -1586,18 +1610,18 @@ li {
   bottom: 25px;
   transform: rotate(180deg);
   right: 270px;
-  border-top: 200px solid #37665E;
+  border-top: 200px solid $couleurPrincipal;
   border-right: 100px solid transparent;
   @media (min-width: 375px) {
     bottom: 30px;
     right: 10px;
-    border-top: 100px solid #37665E;
+    border-top: 100px solid $couleurPrincipal;
     border-right: 60px solid transparent;
   }
   @media (min-width: 768px) {
     bottom: 35px;
     right: 110px;
-    border-top: 200px solid #37665E;
+    border-top: 200px solid $couleurPrincipal;
     border-right: 100px solid transparent;
   }
   @media (min-width: 992px) {
@@ -1716,7 +1740,7 @@ li {
 .bg2-cadre {
   width: 30%;
   background: transparent;
-  border: 2px solid #37665E;
+  border: 2px solid $couleurPrincipal;
   height: 65%;
   position: absolute;
   top: 50px;
@@ -1921,7 +1945,7 @@ canvas {
   }
   &--3 {
     margin: 0;
-    color: #37665E;
+    color: $couleurPrincipal;
     font-size: 1.5rem;
     -webkit-text-stroke: 0.2px white;
     z-index: 1;
@@ -2103,8 +2127,8 @@ label > img {
 input {
   font-size: 1rem;
   margin: 0.8rem 1rem;
-  background: #EEE;
-  border: 1px solid #37665E;
+  background: $inputBg;
+  border: 1px solid $couleurPrincipal;
   outline: none;
   padding: 1rem;
   z-index: 1;
@@ -2121,28 +2145,28 @@ input {
     animation: borderHover 1s ease-in-out infinite;
   }
   &:focus {
-    border: 2px solid #37665E;
+    border: 2px solid $couleurPrincipal;
   }
   @keyframes borderHover {
     0% {
     }
     25% {
-      border-top: 2px solid #37665E;
+      border-top: 2px solid $couleurPrincipal;
     }
     50% {
-      border-top: 2px solid #37665E;
-      border-right: 2px solid #37665E;
+      border-top: 2px solid $couleurPrincipal;
+      border-right: 2px solid $couleurPrincipal;
     }
     75% {
-      border-top: 2px solid #37665E;
-      border-right: 2px solid #37665E;
-      border-bottom: 2px solid #37665E;
+      border-top: 2px solid $couleurPrincipal;
+      border-right: 2px solid $couleurPrincipal;
+      border-bottom: 2px solid $couleurPrincipal;
     }
     100% {
-      border-top: 2px solid #37665E;
-      border-right: 2px solid #37665E;
-      border-bottom: 2px solid #37665E;
-      border-left: 2px solid #37665E;
+      border-top: 2px solid $couleurPrincipal;
+      border-right: 2px solid $couleurPrincipal;
+      border-bottom: 2px solid $couleurPrincipal;
+      border-left: 2px solid $couleurPrincipal;
     }
   }
 }
@@ -2222,7 +2246,7 @@ textarea {
   }
 }
 .enveloppe--haut {
-  border-top: 40px solid #37665E;
+  border-top: 40px solid $couleurPrincipal;
   border-right: 15px solid transparent;
   position: absolute;
   top: -3px;
@@ -2230,20 +2254,20 @@ textarea {
   left: 35px;
   transition: all 1s ease-in-out;
   @media (min-width: 1200px) {
-    border-top: 40px solid #37665E;
+    border-top: 40px solid $couleurPrincipal;
     border-right: 15px solid transparent;
     top: -3px;
     left: 35px;
   }
   @media (min-width: 1800px) {
-    border-top: 80px solid #37665E;
+    border-top: 80px solid $couleurPrincipal;
     border-right: 30px solid transparent;
     top: -15px;
     left: 60px;
   }
 }
 .enveloppe--bas {
-  border-top: 40px solid #37665E;
+  border-top: 40px solid $couleurPrincipal;
   border-right: 15px solid transparent;
   transform: scaleX(-1) rotate(90deg);
   position: absolute;
@@ -2251,13 +2275,13 @@ textarea {
   left: 35px;
   transition: all 1s ease-in-out;
   @media (min-width: 1200px) {
-    border-top: 40px solid #37665E;
+    border-top: 40px solid $couleurPrincipal;
     border-right: 15px solid transparent;
     top: 13px;
     left: 35px;
   }
   @media (min-width: 1800px) {
-    border-top: 80px solid #37665E;
+    border-top: 80px solid $couleurPrincipal;
     border-right: 30px solid transparent;
     top: 16px;
     left: 60px;
@@ -2266,7 +2290,7 @@ textarea {
 .bg3-cadre {
   width: 45%;
   background: transparent;
-  border: 2px solid #37665E;
+  border: 2px solid $couleurPrincipal;
   height: 35%;
   position: absolute;
   top: 110px;
@@ -2319,7 +2343,7 @@ textarea {
   margin: 1rem auto;
   height: 50px;
   position: relative;
-  border: 2px solid #37665E;
+  border: 2px solid $couleurPrincipal;
   cursor: pointer;
   transition: all 1s ease-in-out;
   @media (min-width: 1200px) {
@@ -2374,7 +2398,7 @@ textarea {
   height: 20vh;
   display: flex;
   flex-direction: row;
-  background: white;
+  background: $footerBg;
   @media (max-width: 375px) {
     height: 15vh;
   }
@@ -2382,7 +2406,7 @@ textarea {
 
 .footer-left {
   width: 30%;
-  background: #37665E;
+  background: $couleurPrincipal;
   height: 20vh;
   transform: skew(-25deg);
   @media (max-width: 375px) {
@@ -2393,8 +2417,8 @@ textarea {
   width: 63%;
   height: 20vh;
   margin-left: 1rem;
-  background: white;
-  border: 2px solid #37665E;
+  background: $footerBg;
+  border: 2px solid $couleurPrincipal;
   transform: skew(-25deg);
   @media (min-width: 425px) {
     width: 50%;
@@ -2428,7 +2452,7 @@ textarea {
   }
   & > a {
     text-decoration: none;
-    color: #37665E;
+    color: $couleurPrincipal;
     position: relative;
     top: -5px;
     left: 5px;
@@ -2451,7 +2475,7 @@ textarea {
   position: absolute;
   right: 40px;
   transform: rotate(180deg);
-  border-top: 20vh solid #37665E;
+  border-top: 20vh solid $couleurPrincipal;
   border-right: 66px solid transparent;
   @media (min-width: 375px) {
     display: none;
@@ -2460,11 +2484,11 @@ textarea {
     display: block;
     right: 30px;
     border-right: 90px solid transparent;
-    border-top: 20vh solid #37665E;
+    border-top: 20vh solid $couleurPrincipal;
   }
   @media (min-width: 992px) {
     right: 40px;
-    border-top: 20vh solid #37665E;
+    border-top: 20vh solid $couleurPrincipal;
     border-right: 66px solid transparent;
   }
   @media (min-width: 1200px) {
@@ -2481,7 +2505,7 @@ textarea {
   right: -56px;
   bottom: 18px;
   transform: rotate(1deg);
-  border-top: 17vh solid white;
+  border-top: 17vh solid $footerBg;
   border-right: 51px solid transparent;
   @media (min-width: 375px) {
     display: none;
@@ -2490,19 +2514,19 @@ textarea {
     display: block;
     right: -45px;
     bottom: 18px;
-    border-top: 17vh solid white;
+    border-top: 17vh solid $footerBg;
     border-right: 40px solid transparent;
   }
   @media (min-width: 768px) {
     right: -70px;
     bottom: 18px;
-    border-top: 17vh solid white;
+    border-top: 17vh solid $footerBg;
     border-right: 65px solid transparent;
   }
   @media (min-width: 992px) {
     right: -56px;
     bottom: 18px; 
-    border-top: 17vh solid white;
+    border-top: 17vh solid $footerBg;
     border-right: 51px solid transparent;
   }
   @media (min-width: 1200px) {
@@ -2510,7 +2534,7 @@ textarea {
   @media (min-width: 1800px) {
     right: -96px;
     bottom: 18px;
-    border-top: 18vh solid white;
+    border-top: 18vh solid $footerBg;
     border-right: 92px solid transparent;
   }
 }
@@ -2544,7 +2568,7 @@ textarea {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: black;
+  background: $socialRoundFooterBg;
   box-shadow: 3px -2px 0px 0px white;
   position: relative;
   margin-bottom: 0.5rem;
@@ -2598,26 +2622,26 @@ textarea {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #EEEEEE;
+  background-color: $staticBgColor;
   align-items: flex-start; 
   justify-content: center;
   padding-top: 2rem;
   transform: rotate(3deg);
   cursor: pointer;
   &:hover {
-    background-color: #37665E;
+    background-color: $couleurPrincipal;
     & > .scrollToTop-link--1  {
-      background-color: #EEEEEE;
+      background-color: $staticBgColor;
     }
      & > .scrollToTop-link--2  {
-      background-color: #EEEEEE;
+      background-color: $staticBgColor;
     }
   }
   &-link--1 {
     display: block;
     width:41px;
     height:5px;
-    background-color: #37665E;
+    background-color: $couleurPrincipal;
     transform: rotate(-48deg) translate(16px, -8px);
     transition:0.4s;
   }
@@ -2625,7 +2649,7 @@ textarea {
     display: block;
     width:41px;
     height:5px;
-    background-color: #37665E;
+    background-color: $couleurPrincipal;
     transform: rotate(39deg) translate(-13px, -11px);
     transition:0.4s;
   }
@@ -2645,7 +2669,7 @@ textarea {
 }
 .colorPickerTitle {
   font-family: 'Bad Script', cursive;
-  background: #37665E;
+  background: $couleurPrincipal;
   color: white;
   transform: skew(-25deg);
   width: 100px;
@@ -2656,7 +2680,7 @@ textarea {
 
 #reponse {
   display: none;
-  background: #37665E;
+  background: $couleurPrincipal;
   transform: skew(-25deg);
   color: white;
   width: 200px;
@@ -2673,11 +2697,11 @@ textarea {
 .cookieBanner {
   display: none;
   z-index: 1;
-  background-color: #37665E;
+  background-color: $couleurPrincipal;
   color: #000;
   font-size: 0.7rem;
   position: fixed;
-  top: 500px;
+  top: 400px;
   left: 0;
   width: 200px;
   margin: 1rem;
@@ -2696,23 +2720,23 @@ textarea {
   &--add {
     margin-right: 1rem;
     background-color: #EEEEEE;
-    border: 1px solid #37665E;
+    border: 1px solid $couleurPrincipal;
     box-shadow: 5px 4px 11px 0px black;
     font-weight: bold;
     cursor: pointer;
     &:hover {
-      background-color: #00332b;
+      background-color: $acceptCookieColor;
       color: white;
     }
 
   }
   &--close {
     background-color: #EEEEEE;
-    border: 1px solid #37665E;
+    border: 1px solid $couleurPrincipal;
     box-shadow: 5px 4px 11px 0px black;
     cursor: pointer;
     &:hover {
-      background-color: #86151c;
+      background-color: $refuseCookieColor;
       color: white;
     }
   }
