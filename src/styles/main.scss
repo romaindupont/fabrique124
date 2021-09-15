@@ -1,7 +1,7 @@
 @font-face {
   font-family: "casablanca";
-  src: url("C:/Users/rddal/OneDrive/Bureau/Dev/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype");
-  /* src: url("/workspace/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype") ;*/
+ /*  src: url("C:/Users/rddal/OneDrive/Bureau/Dev/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype"); */
+  src: url("/workspace/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype") ;
  }
 
 $font-size: 1rem;
@@ -2728,4 +2728,52 @@ textarea {
     line-height: 100px;
     font-size: 1.2rem;
     z-index: 10;
+  }
+
+  .cookieBanner {
+    display: none;
+    z-index: 1;
+    background-color: #37665E;
+    color: #000;
+    font-size: 0.7rem;
+    position: fixed;
+    top: 500px;
+    left: 0;
+    width: 200px;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 0px 4px 2px;
+    &-paragraph {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .cookieBanner-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    &--add {
+      margin-right: 1rem;
+      background-color: #EEEEEE;
+      border: 1px solid #37665E;
+      box-shadow: 5px 4px 11px 0px black;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        background-color: #00332b;
+        color: white;
+      }
+
+    }
+    &--close {
+      background-color: #EEEEEE;
+      border: 1px solid #37665E;
+      box-shadow: 5px 4px 11px 0px black;
+      cursor: pointer;
+      &:hover {
+        background-color: #86151c;
+        color: white;
+      }
+    }
   }

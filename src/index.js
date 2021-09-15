@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
+/* import { cookieGoogle } from './js/cookie.js'; */
 
 
 const heading = document.createElement('h1')
@@ -23,6 +24,8 @@ const disparition = () => {
   titreApparition.forEach(element => element.style.display = "block");
   const scrollToTop = document.querySelector('.scrollToTop');
   scrollToTop.style.display = 'inline-flex';
+  const cookieBanner = document.querySelector('.cookieBanner');
+  cookieBanner.style.display = 'block';
 }
 const numberChange = (number) => {
   const percent = document.querySelector('.textChange');
@@ -64,6 +67,21 @@ const OpenCloseMenu = () => {
     const nav = document.querySelector('.menu-nav');
     nav.classList.toggle('menu-nav--open');
     
+  })
+}
+
+const AcceptCookiePopup = () => {
+  const addButton = document.querySelector('.cookieBanner-button--add');
+  addButton.addEventListener('click', () => {
+    const cookieBanner = document.querySelector('.cookieBanner');
+    cookieBanner.style.display = 'none';
+  })
+}
+const RefuseCookiePopup = () => {
+  const RefuseButton = document.querySelector('.cookieBanner-button--close');
+  RefuseButton.addEventListener('click', () => {
+    const cookieBanner = document.querySelector('.cookieBanner');
+    cookieBanner.style.display = 'none';
   })
 }
 const sendMail = () => {
@@ -237,4 +255,4 @@ const car = () => {
     
   }   */
 }
-app.append(time, AddLogo(), OpenCloseMenu(),CloseMenuOnClick() ,sendMail(), car())
+app.append(time, AddLogo(), OpenCloseMenu(),CloseMenuOnClick() ,sendMail(), car(), AcceptCookiePopup(), RefuseCookiePopup()/* , cookieGoogle */)
