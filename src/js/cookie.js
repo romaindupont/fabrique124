@@ -1,9 +1,9 @@
 const cookie = {
-  init:function() {
+  init:function () {
     cookie.AcceptCookie();
     cookie.RefuseCookie();
   },
-    AcceptCookie: function() {
+    AcceptCookie: function () {
       const addButton = document.querySelector('.cookieBanner-button--add');
       addButton.addEventListener('click', () => {
         const cookieBanner = document.querySelector('.cookieBanner');
@@ -21,7 +21,7 @@ const cookie = {
       }
       document.cookie = name + "=" + (value || "")  + expires + "; path=/";
     },
-    RefuseCookie: function() {
+    RefuseCookie: function () {
       const addButton = document.querySelector('.cookieBanner-button--close');
       addButton.addEventListener('click', () => {
         const cookieBanner = document.querySelector('.cookieBanner');
@@ -29,11 +29,11 @@ const cookie = {
         cookie.setCookie('trackMe',false,356)
       })
     },
-    setCookieAndLoad: function(){
+    setCookieAndLoad: function () {
       cookie.setCookie('trackMe',true,356);
       cookie.loadGoogleAnalytics();
     },
-    getCookie: function(name) {
+    getCookie: function (name) {
       var nameEQ = name + "=";
       var ca = document.cookie.split(';');
       for(var i=0;i < ca.length;i++) {
@@ -46,7 +46,7 @@ const cookie = {
   eraseCookie: function (name) {   
       document.cookie = name+'=; Max-Age=-99999999;';  
   },
-  loadGoogleAnalytics: function (){
+  loadGoogleAnalytics: function () {
     var UACODE = "UA-XXXXXXX-X";
     var GTMCODE = "GTM-XXXXXXX";
 	// run GA tracking scripts
