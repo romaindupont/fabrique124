@@ -7,17 +7,8 @@
 $font-size: 1rem;
 $font-color: lch(53 105 40);
 $red: red;
-/* @media (min-width: 576px) { ... }
-font-family: 'Athiti', sans-serif;
-font-family: 'Buda', cursive;
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+$staticBgColor: #eee;
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... } */
 html {
   font-size: $font-size;
   color: $font-color;
@@ -41,16 +32,16 @@ body {
   z-index: 12;
   @media (min-width: 375px) { 
     left: 30%;
-   }
+  }
    @media (min-width: 768px) { 
     left: 40%;
-   }
+  }
   @media (min-width: 1200px) { 
     top: 25%;
     left: 45%;
     width: 150px;
     height: 300px;
-   }
+  }
 }
 .circle {
   stroke-dasharray: 720;
@@ -409,41 +400,6 @@ li {
   background: #fff;
 }
 
-/* .imageMove {
-  width: 100px;
-  height: 100px;
-  background: red;
-  background-image: url('../assets/Illustrations/bg2.jpeg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
-  animation: borderMove 6s ease-in 1s infinite alternate;
-}
-@keyframes borderMove {
-  0% {
-    border-radius:70% 30% 30% 70% / 70% 70% 30% 30%;
-  }
-  25% {
-    border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-  50% {
-    border-radius:70% 70% 30% 70% / 30% 30% 30% 30%;
-  }
-  75% {
-    border-radius:30% 30% 30% 30% / 30% 30% 70% 70%;
-  }
-  100% {
-    border-radius:70% 30% 30% 70% / 70% 70% 30% 30%;
-  }
-}
-.imageMoveBis {
-  width: 100px;
-  height: 200px;
-  background: red;
-  background-image: url('../assets/Illustrations/bg2.jpeg');
-  background-size: cover;
-  background-position: center;
-} */
 .section1 {
   display: flex;
   width: 100vw;
@@ -834,7 +790,6 @@ li {
 }
 .bg1-container {
   position: relative;
-
   &-cible {
     width: 50px;
     height: 50px;
@@ -1318,11 +1273,8 @@ li {
   transition: all 0.5s ease;
   width: 50vw;
   height: 50vh;
-
-  &:hover {
-    
-    & > .apropos-textFlottant--1 {
-     
+  &:hover {   
+    & > .apropos-textFlottant--1 { 
     }
   }
   &--1 {
@@ -1457,19 +1409,19 @@ li {
     @keyframes textFlottant3 {
       0% {
         transform: translate3d(-2px, 2px, 0px);
-    }
-    25% {
+      }
+      25% {
         transform: translate3d(-4px, 1px, 0px);
-    }
-    50% {
+      }
+      50% {
         transform: translate3d(0px, 2px, 0px);
-    }
-    75% {
+      }
+      75% {
         transform: translate3d(-2px, 4px, 0px);
-    }
-    100% {
+      }
+      100% {
         transform: translate3d(-4px, 3px, 0px);
-    }
+      }
     }
     @media (min-width: 375px) {
       font-size: 1.5rem;
@@ -1944,28 +1896,28 @@ canvas {
       0% {
         transform: translate3d(-10px, 2px, 0px);
         z-index: 0;
-    }
-    25% {
+      }
+      25% {
         transform: translate3d(-5px, 0px, 0px);
         z-index: 0;
-    }
-    50% {
+      }
+      50% {
         transform: translate3d(0px, 2px, 0px);
         z-index: 1;
-    }
-    75% {
+      }
+      75% {
         transform: translate3d(-5px, 4px, 0px);
         z-index: 1;
-    }
-    100% {
+      }
+      100% {
         transform: translate3d(-10px, 4px, 0px);
         z-index: 0;
+      }
     }
-  }
-  @media (min-width: 1200px) {
-    top: 60px;
-    right: 175px;
-  }
+    @media (min-width: 1200px) {
+      top: 60px;
+      right: 175px;
+    }
   }
   &--3 {
     margin: 0;
@@ -1980,19 +1932,19 @@ canvas {
     @keyframes textFlottant3 {
       0% {
         transform: translate3d(-2px, 2px, 0px);
-    }
-    25% {
+      }
+      25% {
         transform: translate3d(-4px, 1px, 0px);
-    }
-    50% {
+      }
+      50% {
         transform: translate3d(0px, 2px, 0px);
-    }
-    75% {
+      }
+      75% {
         transform: translate3d(-2px, 4px, 0px);
-    }
-    100% {
+      }
+      100% {
         transform: translate3d(-4px, 3px, 0px);
-    }
+      }
     }
     @media (min-width: 1200px) {
       font-size: 1.5rem;
@@ -2013,23 +1965,23 @@ canvas {
       0% {
         transform: translate3d(-10px, 2px, 0px);
         z-index: 0;
-    }
-    25% {
+      }
+      25% {
         transform: translate3d(-5px, 0px, 0px);
         z-index: 0;
-    }
-    50% {
+      }
+      50% {
         transform: translate3d(0px, 2px, 0px);
         z-index: 1;
-    }
-    75% {
+      }
+      75% {
         transform: translate3d(-5px, 4px, 0px);
         z-index: 1;
-    }
-    100% {
+      }
+      100% {
         transform: translate3d(-10px, 4px, 0px);
         z-index: 0;
-    }
+      }
   }
   @media (min-width: 1200px) {
     bottom: -60px;
@@ -2047,23 +1999,23 @@ canvas {
       0% {
         transform: translate3d(-10px, 2px, 0px);
         z-index: 0;
-    }
-    25% {
+      }
+      25% {
         transform: translate3d(-5px, 0px, 0px);
         z-index: 0;
-    }
-    50% {
+      }
+      50% {
         transform: translate3d(0px, 2px, 0px);
         z-index: 1;
-    }
-    75% {
+      }
+      75% {
         transform: translate3d(-5px, 4px, 0px);
         z-index: 1;
-    }
-    100% {
+      }
+      100% {
         transform: translate3d(-10px, 4px, 0px);
         z-index: 0;
-    }
+      }
   }
   @media (min-width: 1200px) {
     font-size: 2.5rem;
@@ -2172,27 +2124,27 @@ input {
     border: 2px solid #37665E;
   }
   @keyframes borderHover {
-  0% {
+    0% {
+    }
+    25% {
+      border-top: 2px solid #37665E;
+    }
+    50% {
+      border-top: 2px solid #37665E;
+      border-right: 2px solid #37665E;
+    }
+    75% {
+      border-top: 2px solid #37665E;
+      border-right: 2px solid #37665E;
+      border-bottom: 2px solid #37665E;
+    }
+    100% {
+      border-top: 2px solid #37665E;
+      border-right: 2px solid #37665E;
+      border-bottom: 2px solid #37665E;
+      border-left: 2px solid #37665E;
+    }
   }
-  25% {
-    border-top: 2px solid #37665E;
-  }
-  50% {
-    border-top: 2px solid #37665E;
-    border-right: 2px solid #37665E;
-  }
-  75% {
-    border-top: 2px solid #37665E;
-    border-right: 2px solid #37665E;
-    border-bottom: 2px solid #37665E;
-  }
-  100% {
-    border-top: 2px solid #37665E;
-    border-right: 2px solid #37665E;
-    border-bottom: 2px solid #37665E;
-    border-left: 2px solid #37665E;
-  }
-}
 }
 form > input {
   height: 15px;
@@ -2246,7 +2198,6 @@ textarea {
     width: 50%;
   }
   @media (min-width: 1200px) {
-
   }
 }
 .contact {
@@ -2310,7 +2261,6 @@ textarea {
     border-right: 30px solid transparent;
     top: 16px;
     left: 60px;
-
   }
 }
 .bg3-cadre {
@@ -2323,7 +2273,6 @@ textarea {
   left: 130px;
   z-index: -1;
   transform: skew(5deg);
-  /* height: 205px; */
   @media (min-width: 992px) {
     width: 500px;
     height: 400px;
@@ -2356,14 +2305,11 @@ textarea {
     }
     @media (min-width: 992px) {
       width: 90%;
-      /* left: -540px; */
     }
     @media (min-width: 1200px) {
       width: 100%;
-      /* left: -705px; */
     }
     @media (min-width: 1800px) {
-      /* left: -1100px; */
     }
 }
 
@@ -2383,7 +2329,6 @@ textarea {
   @media (min-width: 1800px) {
     width: 150px;
     height: 90px;
-
   }
   &:hover {
     width: 95px;
@@ -2443,7 +2388,6 @@ textarea {
   @media (max-width: 375px) {
     height: 15vh;
   }
-  
 }
 .footer-right {
   width: 63%;
@@ -2454,7 +2398,6 @@ textarea {
   transform: skew(-25deg);
   @media (min-width: 425px) {
     width: 50%;
-
   }
   @media (min-width: 768px) {
     width: 55%;
@@ -2594,8 +2537,7 @@ textarea {
     flex-direction: column;
     align-content: space-around;
   }
-  @media (min-width: 992px) {
-    
+  @media (min-width: 992px) { 
   }
 }
 .rond {
@@ -2621,7 +2563,6 @@ textarea {
   @media (min-width: 1800px) {
     width: 65px;
     height: 65px;
-
   }
 }
 
@@ -2665,31 +2606,30 @@ textarea {
   cursor: pointer;
   &:hover {
     background-color: #37665E;
-
-    &>.scrollToTop-link--1  {
+    & > .scrollToTop-link--1  {
       background-color: #EEEEEE;
-     }
-     &>.scrollToTop-link--2  {
+    }
+     & > .scrollToTop-link--2  {
       background-color: #EEEEEE;
-     }
+    }
   }
   &-link--1 {
-     display: block;
-     width:41px;
-     height:5px;
-     background-color: #37665E;
-     transform: rotate(-48deg) translate(16px, -8px);
-     transition:0.4s;
-   }
-     &-link--2 {
-     display: block;
-     width:41px;
-     height:5px;
-     background-color: #37665E;
-     transform: rotate(39deg) translate(-13px, -11px);
-     transition:0.4s;
-   }
+    display: block;
+    width:41px;
+    height:5px;
+    background-color: #37665E;
+    transform: rotate(-48deg) translate(16px, -8px);
+    transition:0.4s;
   }
+  &-link--2 {
+    display: block;
+    width:41px;
+    height:5px;
+    background-color: #37665E;
+    transform: rotate(39deg) translate(-13px, -11px);
+    transition:0.4s;
+  }
+}
 
 .colorPicker {
   width: 100px;
@@ -2697,83 +2637,83 @@ textarea {
   flex-direction: column;
   cursor: pointer;
 }
-  .colorPicker-name {
-    font-family: 'Bad Script', cursive;
-   /*  font-family: "casablanca"; */
-    font-size: 1.5rem;
+.colorPicker-name {
+  font-family: 'Bad Script', cursive;
+  /*  font-family: "casablanca"; */
+  font-size: 1.5rem;
+  text-align: center;
+}
+.colorPickerTitle {
+  font-family: 'Bad Script', cursive;
+  background: #37665E;
+  color: white;
+  transform: skew(-25deg);
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  padding: 0.5rem 0.8rem 0px 0.8rem;
+}
+
+#reponse {
+  display: none;
+  background: #37665E;
+  transform: skew(-25deg);
+  color: white;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+  right: 175px;
+  line-height: 100px;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.cookieBanner {
+  display: none;
+  z-index: 1;
+  background-color: #37665E;
+  color: #000;
+  font-size: 0.7rem;
+  position: fixed;
+  top: 500px;
+  left: 0;
+  width: 200px;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 0px 4px 2px;
+  &-paragraph {
+    padding: 0.5rem;
     text-align: center;
   }
-  .colorPickerTitle {
-    font-family: 'Bad Script', cursive;
-    background: #37665E;
-    color: white;
-    transform: skew(-25deg);
-    width: 100px;
-    height: 50px;
-    text-align: center;
-    padding: 0.5rem 0.8rem 0px 0.8rem;
-  }
+}
 
-  #reponse {
-    display: none;
-    background: #37665E;
-    transform: skew(-25deg);
-    color: white;
-    width: 200px;
-    height: 100px;
-    text-align: center;
-    position: absolute;
-    bottom: -20px;
-    right: 175px;
-    line-height: 100px;
-    font-size: 1.2rem;
-    z-index: 10;
-  }
+.cookieBanner-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  &--add {
+    margin-right: 1rem;
+    background-color: #EEEEEE;
+    border: 1px solid #37665E;
+    box-shadow: 5px 4px 11px 0px black;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      background-color: #00332b;
+      color: white;
+    }
 
-  .cookieBanner {
-    display: none;
-    z-index: 1;
-    background-color: #37665E;
-    color: #000;
-    font-size: 0.7rem;
-    position: fixed;
-    top: 500px;
-    left: 0;
-    width: 200px;
-    margin: 1rem;
-    border-radius: 10px;
-    box-shadow: 2px 0px 4px 2px;
-    &-paragraph {
-      padding: 0.5rem;
-      text-align: center;
+  }
+  &--close {
+    background-color: #EEEEEE;
+    border: 1px solid #37665E;
+    box-shadow: 5px 4px 11px 0px black;
+    cursor: pointer;
+    &:hover {
+      background-color: #86151c;
+      color: white;
     }
   }
-
-  .cookieBanner-button {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    &--add {
-      margin-right: 1rem;
-      background-color: #EEEEEE;
-      border: 1px solid #37665E;
-      box-shadow: 5px 4px 11px 0px black;
-      font-weight: bold;
-      cursor: pointer;
-      &:hover {
-        background-color: #00332b;
-        color: white;
-      }
-
-    }
-    &--close {
-      background-color: #EEEEEE;
-      border: 1px solid #37665E;
-      box-shadow: 5px 4px 11px 0px black;
-      cursor: pointer;
-      &:hover {
-        background-color: #86151c;
-        color: white;
-      }
-    }
-  }
+}

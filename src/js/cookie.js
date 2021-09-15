@@ -43,7 +43,6 @@ const cookie = {
       }
       return null;
   },
-  
   eraseCookie: function (name) {   
       document.cookie = name+'=; Max-Age=-99999999;';  
   },
@@ -70,7 +69,6 @@ const cookie = {
         
         document.write('<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RKTZZ4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>');
   }
-  
 }
 
 export const cookieGoogle = document.addEventListener('DOMContentLoaded', cookie.init)

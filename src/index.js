@@ -6,10 +6,6 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 /* import { cookieGoogle } from './js/cookie.js'; */
 
-
-const heading = document.createElement('h1')
-heading.textContent = 'Romain Dupont Webpack Config'
-
 // Append heading node to the DOM
 const app = document.querySelector('#root')
 
