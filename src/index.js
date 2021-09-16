@@ -37,7 +37,7 @@ const AddLogo = () => {
     delay += 60;
   }
 }
-const time = setTimeout(disparition,8000);
+const time = setTimeout(disparition, 8000);
 
 const CloseMenuOnClick = () => {
   const link = document.querySelectorAll('.menu-nav--link'); 

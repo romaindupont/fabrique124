@@ -26,11 +26,11 @@ const cookie = {
       addButton.addEventListener('click', () => {
         const cookieBanner = document.querySelector('.cookieBanner');
         cookieBanner.style.display = 'none';
-        cookie.setCookie('trackMe',false,356)
+        cookie.setCookie('trackMe', false, 356)
       })
     },
     setCookieAndLoad: function () {
-      cookie.setCookie('trackMe',true,356);
+      cookie.setCookie('trackMe', true, 356);
       cookie.loadGoogleAnalytics();
     },
     getCookie: function (name) {
