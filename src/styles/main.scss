@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
   font-family: "casablanca";
  /*  src: url("C:/Users/rddal/OneDrive/Bureau/Dev/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype"); */
-  src: url("/workspace/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype") ;
- }
+ /*  src: url("/workspace/fabrique124/src/assets/Fonts/casablanca_2/Casablanca.ttf") format("truetype") ;
+ } */
 
 $font-size: 1rem;
 $font-color: lch(53 105 40);
@@ -1810,14 +1810,16 @@ li {
   flex-direction: column;  
   z-index: 1;
   @media (min-width: 375px) {
-    top: 560px;
+    top: 650px;
     left: 20px;
     flex-direction: row;
+    width: 300px;
   }
   @media (min-width: 425px) {
-    top: 490px;
+    top: 6000px;
     left: 90px;
     flex-direction: row;
+    width: 300px;
   }
   @media (min-width: 768px) {
     top: 840px;
@@ -2660,6 +2662,7 @@ textarea {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  margin-left: 1rem;
 }
 .colorPicker-name {
   font-family: 'Bad Script', cursive;
@@ -2676,8 +2679,36 @@ textarea {
   height: 50px;
   text-align: center;
   padding: 0.5rem 0.8rem 0px 0.8rem;
+  @media (min-width: 375px) {
+    height: 100px;
+  }
+  @media (min-width: 425px) {
+    height: 100px;
+  }
+  @media (min-width: 1200px) {
+    height: 50px;
+  }
+  @media (min-width: 1800px) {
+    height: 50px;
+  }
 }
-
+.colorPicker-all {
+  display: flex;
+  overflow-x: scroll;
+  margin: auto;
+  @media (min-width: 375px) {
+    flex-direction: row;
+  }
+  @media (min-width: 425px) {
+    flex-direction: row;
+  }
+  @media (min-width: 1200px) {
+    flex-direction: column;
+  }
+  @media (min-width: 1800px) {
+    flex-direction: column;
+  }
+}
 #reponse {
   display: none;
   background: $couleurPrincipal;
@@ -2710,6 +2741,18 @@ textarea {
   &-paragraph {
     padding: 0.5rem;
     text-align: center;
+  }
+  @media (min-width: 375px) {
+    top: 625px;
+  }
+  @media (min-width: 425px) {
+    top: 625px;
+  }
+  @media (min-width: 1200px) {
+    top: 400px;
+  }
+  @media (min-width: 1800px) {
+    top: 400px;
   }
 }
 
