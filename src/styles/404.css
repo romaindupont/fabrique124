@@ -1,0 +1,19 @@
+#logo404 {
+  width: 10%;
+}
+
+.error-page {
+  text-align: center;
+}
+
+.error-page  > span {
+  font-size: 18rem;
+  font-family: "Anton", sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  margin: -50px;
+}

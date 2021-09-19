@@ -145,52 +145,108 @@ const car = () => {
   });
 
   const parisCarInput = document.getElementById('parisCar');
+  const dublinCarInput = document.getElementById('dublinCar');
+  const osloCarInput = document.getElementById('osloCar');
+  const casablancaCarInput = document.getElementById('casablancaCar');
+  const milanCarInput = document.getElementById('milanCar');
+  const moscouCarInput = document.getElementById('moscouCar');
+  const lisbonneCarInput = document.getElementById('lisbonneCar');
+
   parisCarInput.addEventListener('click', function () {
     bodyMaterial.color.set('#d31426');
     detailsMaterial.color.set('#535353');
     seatMaterial.color.set('#141313');
+    parisCarInput.style.color = '#37665e';
+    dublinCarInput.style.color = 'black';
+    osloCarInput.style.color = 'black';
+    casablancaCarInput.style.color = 'black';
+    milanCarInput.style.color = 'black';
+    moscouCarInput.style.color = 'black';
+    lisbonneCarInput.style.color = 'black';
   });
 
-  const dublinCarInput = document.getElementById('dublinCar');
+  
   dublinCarInput.addEventListener('click', function () {
     bodyMaterial.color.set('#0d1c08');
     detailsMaterial.color.set('#0d1c08');
     seatMaterial.color.set('#C2531E');
+    parisCarInput.style.color = 'black';
+    dublinCarInput.style.color = '#37665e';
+    osloCarInput.style.color = 'black';
+    casablancaCarInput.style.color = 'black';
+    milanCarInput.style.color = 'black';
+    moscouCarInput.style.color = 'black';
+    lisbonneCarInput.style.color = 'black';
   });
 
-  const osloCarInput = document.getElementById('osloCar');
+  
   osloCarInput.addEventListener('click', function () {
     bodyMaterial.color.set('#021250');
     detailsMaterial.color.set('#021250');
     seatMaterial.color.set('#C2531E');
+    parisCarInput.style.color = 'black';
+    dublinCarInput.style.color = 'black';
+    osloCarInput.style.color = '#37665e';
+    casablancaCarInput.style.color = 'black';
+    milanCarInput.style.color = 'black';
+    moscouCarInput.style.color = 'black';
+    lisbonneCarInput.style.color = 'black';
   });
 
-  const casablancaCarInput = document.getElementById('casablancaCar');
+ 
   casablancaCarInput.addEventListener('click', function () {
     bodyMaterial.color.set('#fff');
     detailsMaterial.color.set('#4C4C53');
     seatMaterial.color.set('#C2531E');
+    parisCarInput.style.color = 'black';
+    dublinCarInput.style.color = 'black';
+    osloCarInput.style.color = 'black';
+    casablancaCarInput.style.color = '#37665e';
+    milanCarInput.style.color = 'black';
+    moscouCarInput.style.color = 'black';
+    lisbonneCarInput.style.color = 'black';
   });
 
-  const milanCarInput = document.getElementById('milanCar');
+
   milanCarInput.addEventListener('click', function () {
     bodyMaterial.color.set('#d31426');
     detailsMaterial.color.set('#535353');
     seatMaterial.color.set('#C2531E');
+    parisCarInput.style.color = 'black';
+    dublinCarInput.style.color = 'black';
+    osloCarInput.style.color = 'black';
+    casablancaCarInput.style.color = 'black';
+    milanCarInput.style.color = '#37665e';
+    moscouCarInput.style.color = 'black';
+    lisbonneCarInput.style.color = 'black';
   });
 
-  const moscouCarInput = document.getElementById('moscouCar');
+
   moscouCarInput.addEventListener('click', function () {
     bodyMaterial.color.set('#fff');
     detailsMaterial.color.set('#fff');
     seatMaterial.color.set('#d31426');
+    parisCarInput.style.color = 'black';
+    dublinCarInput.style.color = 'black';
+    osloCarInput.style.color = 'black';
+    casablancaCarInput.style.color = 'black';
+    milanCarInput.style.color = 'black';
+    moscouCarInput.style.color = '#37665e';
+    lisbonneCarInput.style.color = 'black';
   });
 
-  const lisbonneCarInput = document.getElementById('lisbonneCar');
+
   lisbonneCarInput.addEventListener('click', function () {
     bodyMaterial.color.set('#b6ab00');
     detailsMaterial.color.set('#b6ab00');
     seatMaterial.color.set('#C2531E');
+    parisCarInput.style.color = 'black';
+    dublinCarInput.style.color = 'black';
+    osloCarInput.style.color = 'black';
+    casablancaCarInput.style.color = 'black';
+    milanCarInput.style.color = 'black';
+    moscouCarInput.style.color = 'black';
+    lisbonneCarInput.style.color = '#37665e';
   });
 
   const loader = new GLTFLoader();
