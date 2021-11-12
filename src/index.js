@@ -108,11 +108,9 @@ const car = () => {
   camera.position.set(30, 5, 20);
 
   const controls = new OrbitControls(camera, container);
-  /* controls.addEventListener( 'change', animate ); */
   controls.target.set(0, 0.5, 0);
   controls.minDistance = 0.8;
   controls.minZoom = 0.5;
-  /* controls.update(); */
 
   const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
@@ -284,16 +282,8 @@ const car = () => {
 );
 
   function render() {
-    /* controls.update();
-    requestAnimationFrame( render ); */
     renderer.render(scene, camera);
     
   }
-/*   function animate() {
-    controls.update();
-    requestAnimationFrame( animate );
-    renderer.render( scene, camera );
-    
-  }   */
 }
 app.append(time, AddLogo(), OpenCloseMenu(),CloseMenuOnClick() ,sendMail(), car(), AcceptCookiePopup(), RefuseCookiePopup()/* , cookieGoogle */)
