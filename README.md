@@ -17,4 +17,4 @@ Effet Parallax, intégration 3D + intéraction 3D avec ThreeJS, ...
 * Romain Dupont - Developpeur Front & Back (https://github.com/romaindupont) [myWebsite](https://www.romaindupont.me/)
 
 ## Some Screen Print
-![Watch the video](https://www.youtube.com/embed/9D0aWXNdKWk)
+[![Watch the video](https://img.youtube.com/vi/9D0aWXNdKWk/maxresdefault.jpg)](https://www.youtube.com/embed/9D0aWXNdKWk)
